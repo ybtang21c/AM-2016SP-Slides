@@ -1,0 +1,381 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{《高等数学(下)》复习提纲}
+	\linespread{1.5}
+	\begin{itemize}
+	  \item {\bf 主要内容：}
+	  \begin{enumerate}
+		\item 常微分方程
+		\item 空间解析几何
+		\item 多元函数微分学
+		\item 重积分
+		\item 曲线与曲面积分
+		\item 幂级数与Fourier级数
+	  \end{enumerate}
+% 	  \item {\bf  课后作业：}
+% 	  \begin{itemize}
+% 	    \item {\b 习题13.2：1(1,4),3(1),5,6(3)}
+% 	  \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{一、常微分方程}
+	\linespread{1.2}\pause 
+	{\bf 1、一阶方程}\pause 
+	
+	{\b{\bf 关键词：}\pause 变量分离、\pause 常数变异、\pause 变量替换、\pause 全微分}\pause 
+	\begin{itemize}
+	  \item 可分离变量方程：\pause 注意分母为零时对应的特解\pause 
+	  \item 齐次方程：\pause 
+	  $$y'=\df{2x-5y+3}{2x+4y-6},\pause \quad xy'=\sqrt{x^2-y^2}+y\pause $$
+	  \vspace{-1em}
+	  \item 常数变异法：\pause 等价于方程两边同时乘以$e^{\int p(x)dx}$\pause 
+	  \item Bernoulli方程：\pause $y'+P(x)y=Q(x)y^n\,(n\ne 0,1)$\pause 
+	  $$y'-\df y{2x}=\df{x^2}{2y}$$
+% 	  \item {\b 特殊技巧：}变量替换、$xy$倒置、全微分方程
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 解一阶方程的特殊技巧：}\pause 
+	\begin{itemize}
+	  \item {\b 变量替换：}\pause 
+	  $$xy'+y=y(\ln x+\ln y),\pause \quad y'=(x+y)^2\pause $$
+	  \vspace{-2em}
+% 	  $$2x\ln xdy+y(y^2\ln x-1)dx=0,\quad y'=(x+y)^2$$
+	  \item {\b $xy$倒置：}\pause 
+	  $$y'=\df 1{x+y^2},\pause \quad y'=\df{x}{x^2+y^2}\pause $$
+	  \vspace{-1em}
+	  \item {\b 全微分方程：}\pause 
+	  $$y'=-\df{\sin x+y}{x+\cos y},\pause \quad
+	  xdx+ydy+\df{ydy-xdx}{x^2+y^2}=0\pause $$
+	  \vspace{-1em}
+	  \item {\b 幂级数法：}\pause 不推荐使用
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 2、二阶方程}\pause 
+	
+	{\b{\bf 关键词：}\pause 降阶、\pause 解的结构、\pause 特征方程}\pause 
+	\begin{itemize}
+	  \item $y''=f(x,y')$：\pause 令$y'=p(x)$\pause 
+	  \item $y''=f(y,y')$：\pause 令$y'=p(y)$\pause 
+	  \item 齐次线性方程与非齐次线性方程解的结构：
+	  $$y=Y+y^*$$\pause 
+	  \vspace{-1em}
+	  \item Liouville公式：已知二阶齐次线性方程的一个解，求另一个解，令：
+	  $$y_2=u(x)y_1$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{itemize}
+	  \item {\bf 二阶常系数齐次线性微分方程}\pause 
+	  $$y''+py'+qy=0$$\pause 
+	  特征方程：$r^2+pr+q=0$，\pause 根据$r$的值确定不同类型的解\pause 
+	  $$\hspace{-2em}C_1e^{r_1}x+C_2e^{r_2x},\pause \,(C_1+xC_2)e^{rx},\pause
+	  \,e^{\alpha x} (C_1\cos\beta x+C_2\sin\beta x)\pause $$
+	  \item {\bf 二阶常系数非齐次线性微分方程}\pause 
+	  $$y''+py'+qy=e^{\lambda x}P_m(x)$$
+	  \pause 提示：注意观察特解
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{二、空间解析几何}
+	\linespread{1.2}\pause 
+	{\bf 1、向量及其运算}\pause 
+	
+	{\b{\bf 关键词：}\pause 向量运算、\pause 几何意义\pause (投影、距离、面积、体积、\ldots)}\pause 
+	\begin{itemize}
+	  \item 向量的表示：\pause 长度+方向\pause 
+	  \item 向量运算：\pause 叉乘$\to$反交换律\pause 
+	  \item 平面方程：\pause 点法式、\pause 一般式、\pause 三点式、\pause 截距式\pause 
+	  \item 直线方程：\pause 点向式、\pause 标准式、\pause 一般式、\pause 两点式\pause 
+	  \item 空间对象的几何关系：\pause 距离、\pause 夹角、\pause 平行与垂直
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 2、空间曲面}\pause 
+	
+	{\b{\bf 关键词：}\pause 二次曲面、\pause 旋转曲面}\pause 
+	\begin{itemize}
+	  \item 二次曲面：\pause 球面、\pause 柱面、\pause 抛物面、\pause 双曲面、\pause 锥面\pause \\
+	  {\bf 重点：}\pause 根据方程判定曲面类型\pause 
+	  \item 曲面的参数方程：\pause 2个自由度$\to$2个参数\pause 
+	  \item 旋转曲面与柱面：\pause 利用几何关系确定曲面方程\pause \\
+	  {{\bf 例：}过$(1,0,0),(0,1,1)$的直线绕$z$轴旋转}\pause \\
+	  {{\bf 例：}轴线平行于$x=y=z$，且经过$xOy$平面上的单位圆的柱面}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 3、空间曲线}\pause 
+	
+	{\b{\bf 关键词：}\pause 投影、\pause 参数方程}\pause 
+	\begin{itemize}
+	  \item 曲线的参数方程：\pause 向量值函数$\bm{r}(t)$\pause 
+	  \item 曲线的切线方向：\pause $\bm{r}'(t)$\pause 
+	  \item 投影法求曲线参数方程：\pause \\
+	  \centerline{\alert{投影(消元)$\to$参数化$\to$回代}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{三、多元函数微分学}
+	\linespread{1.2}\pause 
+	{\bf 1、多元函数的连续性与可微性}\pause 
+	
+	{\b{\bf 关键词：}\pause 多重极限、\pause 链式法则}\pause 
+	\begin{itemize}
+	  \item 多重极限 vs. 累次极限\pause 
+	  \item 多元函数连续、偏导存在、偏导连续和可微的关系\pause 
+	  \item 复合函数求偏导\pause \\
+	  {\bf 法一：}链式法则\pause \\
+	  {\bf 法二：}全微分\pause 
+	  \item 隐函数求偏导：\pause 根据方程和变量的数量确定自由变量的个数
+% 	  \item 几何应用：曲面$F(x,y,z)=0$的法线方向$\bigtriangledown F$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 2、方向导数、梯度和多元函数极值}\pause 
+	
+	{\b{\bf 关键词：}\pause 几何意义、\pause Lagrange乘子法}\pause 
+	\begin{itemize}
+	  \item 方向导数与梯度：\pause $D_uf=\bigtriangledown f\cdot\bm{e_u}$\pause 
+	  \item 梯度：\pause 等值线(面)的法方向\pause (函数值增加最快方向)\pause \\
+	  {\bf 例：}曲面$F(x,y,z)=c$的法线方向：$\bigtriangledown F$\pause 
+	  \item Hessian矩阵与Taylor公式\pause \\
+	  {\bf 例：}$x^4+xy+(1+y)^2$在原点处带Peano余项的一阶及二阶Taylor公式\pause \\
+	  {\bf 例：}证明$x,y$很小时：$\ln(1+x)\ln(1+y)\approx xy$\pause 
+	  \item 极值与条件极值：\pause 极值的判定条件、\pause Lagrange乘子法、\pause 条件极值的几何意义
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{四、重积分}
+	\linespread{1.2}\pause 
+	{\b{\bf 关键词：}\pause 微元、\pause 积分次序、\pause 物理意义}\pause 
+	\begin{itemize}
+	  \item 定限的次序决定积分的次序\pause \\
+	  {\bf 典型问题：}根据要求交换积分次序\pause \\
+	  {\bf 关键点：\pause }画图\pause 
+	  \item 坐标变换与重积分的计算\pause \\
+	  {\bf 难点：}坐标变换后的积分定限\pause \\
+	  {\bf 特殊方法：}利用$|J|$计算微元间的变换关系\pause 
+	  \item 重积分与定积分的相互转换\pause 
+	  $$\left[\dint_a^bf(x)g(x)dx\right]^2\leq
+		\dint_a^bf^2(x)dx\dint_a^bg^2(x)dx$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{五、曲线积分与曲面积分}
+	\linespread{1.2}\pause 
+	{\b{\bf 关键词：}\pause 应用背景、\pause 各种积分的相互转换、\pause 对称性}\pause 
+	
+% 	{\bf 1、曲线积分：}
+% 	\begin{itemize}
+% 	  \item 根据问题类型确定积分类型
+% 	  \item 弧长微元：$ds=|\bm{r}'(t)|dt$
+% 	  \item 计算步骤：曲线参数化$\to$定限$\to$积分\\
+% 	  {\bf 对弧长的积分：}上限大于下限\\
+% 	  {\bf 对坐标的积分：}下限对应起点，上限对应终点
+% 	  \item 流量和环量：
+% 	\end{itemize}
+	\begin{enumerate}
+	  \item {\bf 质量相关的问题：}\pause 质心、转动惯量、引力\pause 
+	  \begin{itemize}
+	    \item 二/三重积分：平面片、空间立体\pause 
+	    \item 对弧长的曲线积分：平面/空间曲线\pause 
+	    \item 对面积的曲面积分：空间曲面\pause 
+	  \end{itemize}
+	  \item {\bf 向量场相关的问题}\pause 
+	  \begin{itemize}
+	    \item 流量：Green公式$\to$Stokes公式\pause 
+	    \item 环量(变力做功)：Green公式$\to$Gauss公式\pause 
+	    \item 保守场、全微分、原(势)函数\pause 
+	    \item 散度、旋度\pause 
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 1、对弧长的曲线积分}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}曲线长度、质量、质心、转动惯量、引力\pause 
+	 	$$\int_{L}f(x,y)ds$$\pause
+	 	\vspace{-1em} 
+	  \item {\bf 弧微分：}
+		$$ds=\sqrt{(dx)^2+(dy)^2}=|\bm{r}'(t)|dt$$\pause
+		\vspace{-1em} 
+	  \item {\bf 计算步骤：}曲线参数化$\to$定限$\to$计算积分\pause 
+	  \item \ba{注意：}\alert{化成定积分后必须确保上限大于下限}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 2、对坐标的曲线积分}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}变力做功、流(通)量、环量\pause 
+	  	$$\dint_L\bm{F}d\bm{s}=\dint_L Pdx+Qdy$$\pause 
+	  \begin{itemize}
+	    \item {\bf 流量：}$\dint_L\bm{v}\cdot\bm{n}ds=\dint_LPdy-Qdx$\pause 
+	    \item {\bf 环量：}$\dint_L\bm{v}\cdot\bm{T}ds=\dint_LPdx+Qdy$\pause 
+	  \end{itemize}
+	  \item {\bf 计算步骤：}曲线参数化$\to$定限$\to$计算积分\pause 
+	  \item \ba{注意：}\alert{化成定积分后上、下限与曲线的方向一致}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 3、对面积的曲面积分}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}曲面面积、质量、质心、转动惯量、引力\pause 
+	 	$$\iint_{\Sigma}f(x,y,z)dS$$\pause 
+	  \vspace{-1em}
+	  \item {\bf 面积微元：}
+		$$dS=\sqrt{1+(f'_x)^2+(f'_y)^2}d\sigma_{xy}=\df{d\sigma_{xy}}{|\cos\gamma|}$$\pause
+		$$dS=\df{d\sigma_{yz}}{|\cos\alpha|}=
+		\df{d\sigma_{zx}}{|\cos\beta|}
+		=\df{d\sigma_{xy}}{|\cos\gamma|}$$\pause 
+	  \item {\bf 计算步骤：}投影$\to$写出面积微元$\to$计算积分
+% 	  \item \ba{注意：}\alert{化成定积分后必须确保上限大于下限}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 4、对坐标的曲面积分}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}流(通)量\pause 
+	 	$$\iint_{\Sigma}\bm{v}\cdot\bm{n}dS=
+	 	\iint_{\Sigma}Pdydz+Qdzdx+Rdxdy$$\pause 
+	 	$$\bm{n}dS=(d\sigma_{yz},d\sigma_{zx},d\sigma_{xy})$$\pause 
+	  \item {\bf 计算步骤：}确定投影方向$\to$确定积分符号$\to$计算积分\pause 
+	  \item \ba{灵活掌握两类曲面积分的相互转换}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 5、Green公式$\to$Gauss公式}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}流(通)量与散度\pause 
+	  $$\oint_{\p D}\bm{v}\cdot\bm{n}ds=
+	  \int_D{\mathrm{div}\,\bm{v}}{d\sigma}$$\pause 
+	  \item \ba{注意：}\alert{$\bm{v}$的各分量在$D$内必须偏导连续}\pause 
+	  \item {\bf 无源场：}$\mathrm{div}\,\bm{v}=0$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 6、Green公式$\to$Stokes公式$^*$}\pause 
+	\begin{itemize}
+	  \item {\bf 背景：}环量与旋度\pause 
+	  $$\oint_{\p\Sigma}\bm{v}\cdot\bm{T}ds=
+	  \int_{\Sigma}{\mathrm{rot}\,\bm{v}}\cdot\bm{n}{dS}$$\pause 
+	  \item \alert{注意掌握旋度的行列式形式}\pause 
+	  \item {\bf 无旋场：}保守场
+	  $$\mathrm{rot}\,\bm{v}=0$$\pause 
+	  \item {\bf 原(势)函数：}折线法、凑微分法
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	{\bf 7、对称性在积分计算中的应用}\pause 
+% 	\begin{enumerate}
+% 	  \item {\bf 关键词}
+	  \begin{itemize}
+		\item 区域的对称性\pause 
+		\item 函数的奇偶性\pause 
+		\item 变量的对等性\pause 
+	  
+	  \end{itemize}
+	  {\bf 注意：}对坐标的曲线(面)积分与其他积分对称性的差异\pause 
+	  \vspace{1em}
+% 	\end{enumerate}
+	\hrule
+	\bigskip
+	\centerline{\ba{计算各类积分前，优先考虑对称性}}
+\end{frame}
+
+\begin{frame}{六、函数项级数}
+	\linespread{1.2}\pause 
+	{\bf 1、幂级数}\pause 
+	
+	{\b{\bf 关键词：}\pause 收敛域、\pause 求和、\pause 展开}\pause 
+	\begin{itemize}
+	  \item 幂级数的收敛域：\pause 对称性、\pause 端点单独讨论\pause 
+	  \item 幂级数求和：\pause 逐项求导、积分，利用已知级数\pause \\
+	  {\bf 要点：}\pause 变量替换、\pause 补全缺项\pause 
+	  \item 函数的幂级数展开：\pause 变量替换、逐项求导、积分
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bf 2、Fourier级数}\pause 
+	
+	{\b{\bf 关键词：}\pause 正交性、\pause 和函数、\pause 延拓、\pause 正(余)弦级数}\pause 
+	\begin{itemize}
+	  \item 利用三角函数列的正交性求Fourier系数\pause \\
+	  {\bf 注意：}正确写出$f(x)$在不同区间上的表达式\pause 
+	  \item 和函数：\pause 与原函数仅可能在不连续点处不同\pause \\
+	  {\bf 典型问题：}根据$f(x)$写出$S(x)$，并计算$S(x)$在特殊点处的值\pause 
+	  \item 函数的延拓与正(余)弦级数\pause \\
+	  {\bf 要点：}根据所求级数的类型确定延拓的方法\pause 
+	  \item 周期为$2l$的Fourier级数：坐标伸缩
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{重点}
+	\linespread{1.5}\pause 
+	{\bf 
+	\begin{enumerate}
+	  \item 各种类型的积分计算\pause 
+	  \item 积分与微分的应用\pause 
+	  \item 空间解析几何\pause 
+	  \item 函数项级数\pause 
+	  \item 常微分方程
+	\end{enumerate}
+	}
+\end{frame}
+
+\begin{frame}{难点}
+	\linespread{1.2}\pause 
+	\begin{enumerate}
+	  \item 常微分方程\pause 
+	  \item 幂级数求和\pause 
+	  \item 各种积分的相互转换\pause 
+	  \item Green公式与Gauss公式\pause 
+	  \item 空间对象的几何关系\pause 
+	  \item 多元函数求导
+	\end{enumerate}
+\end{frame}
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

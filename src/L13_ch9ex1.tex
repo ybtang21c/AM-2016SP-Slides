@@ -1,0 +1,134 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第十三讲、多元函数的偏导数习题课}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}
+	  \begin{itemize}
+	    \item 多元函数的极限与连续性
+	    \item 多元复合函数微分的链式法则
+	    \item 一阶微分形式的不变性
+	    \item 隐函数的微分法
+	  \vspace{1em}
+	  \end{itemize}
+% 	  \item {\bf  课后作业：}
+% 	  \begin{itemize}
+% 	    \item {\b 习题10.3：7,9,12,14,16}
+% 	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{多元函数的极限与连续}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例0}\hfill}
+		  证明函数
+		  $$f(x,y)=\left\{\begin{array}{cc}
+		  	\df{x^2y}{x^2+y^2},& (x,y)\ne (0,0)\\
+		  	0,& else
+		  \end{array}\right.$$
+		  在原点可微，但偏导数不连续。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{复合函数的偏导数}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例1}\hfill}
+		\begin{enumerate}
+		  \item 设$z=u^2\ln v,u=\df xy,v=3x-2y$，求$\df {\p z}{\p x},\df{\p z}{\p
+		  y}$\pause 
+		  \item 设$z=\arctan(xy),y=e^x$，求$\df{\d z}{\d x}$\pause 
+		  \item 设$u=f\left(\df xy,\df yz\right)$，求$\df {\p u}{\p x},\df {\p u}{\p y}$
+		  和$\df {\p u}{\p z}$\pause 
+		  \item 设$f(x,2x)=x,f\,'_1(x,2x)=x^2$，求$f\,'_2(x,2x)$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		设$f(x,y)$一阶偏导连续，$f(1,1)=1,f\,'_x(1,1)=2$，
+		
+		$f\,'_y(1,1)=3$，又$\varphi(x)=f(x,f(x,x))$，求
+		$$\left.\df{\d\varphi^3(x)}{\d x}\right|_{x=1}$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		设$z=xf\left(\df yx\right)+yg\left(x,\df xy\right)$，
+		其中$f,g$均二次可微，求
+		$$\df{\p^2 z}{\p x\p y}$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{隐函数求导}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4}\hfill}
+		设$z=z(x,y)$由方程$x^2+y^2+z^2=xf\left(\df yx\right)$确定，
+		且$f$可微，求$\df {\p z}{\p x},\df{\p z}{\p y}$
+	\end{exampleblock}\pause 
+	\begin{exampleblock}{{\bf 例5}\hfill}
+		设$y=f(x,t)$，其中$t$是由$F(x,y,t)=0$所确定的隐函数，$f,F$具有
+		一阶连续偏导数，求$\df{\d y}{\d x}$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		设$F(u,v)$具有一阶连续偏导数，且由$F\left(\df xz,\df yz\right)=0$
+		可确定函数$z=z(x,y)$，求
+		$$x\df{\p z}{\p x}+y\df{\p z}{\p y}$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例7}\hfill}
+		设$u=u(x,y),x=r\cos\theta,y=r\sin\theta$，将方程
+		$$x\df{\p u}{\p y}-y\df{\p u}{\p x}=0$$
+		化为$u$关于$r,\theta$的偏导数的方程。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例8}\hfill}
+		设$u=u(x,y,z)$具有连续偏导数，且
+		$$x=r\sin\theta\cos\varphi,y=r\sin\theta\sin\varphi,z=r\cos\theta$$
+		证明：若$x\df{\p u}{\p x}+y\df{\p u}{\p y}+z\df{\p u}{\p z}=0$，
+		则$u$与$r$无关。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例9}\hfill}
+		设$f(x,y)$一阶偏导连续，$f(1,1)=1,f\,'_1(1,1)=a$，
+		
+		$f\,'_2(1,1)=b$，又$\varphi(x)=f(x,f(x,f(x,x)))$，求
+		$\varphi(1)$与$\varphi'(1)$。
+	\end{exampleblock}
+	\bigskip\pause 
+	\begin{exampleblock}{{\bf 例10}\hfill}
+		设由$\ln(xz)+\arctan(yz)=0$可确定隐函数$z=z(x,y)$，求$z'_x$。
+	\end{exampleblock}
+\end{frame}
+
+%=====================================
+ 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

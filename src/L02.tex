@@ -1,0 +1,435 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}
+	\frametitle{第二讲、二阶微分方程的解法}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S7.3-7.4 ）}
+	  \begin{itemize}
+	    \item 熟练掌握两类特殊二阶方程的解法
+	    \item 熟练掌握二阶齐次线性微分方程的解法
+	    \item 了解两类二阶非齐次线性微分方程的解法
+% 	    \item 熟练掌握常见的一阶常微分方程的解法
+% 	    \begin{itemize}
+% 	      \item 可分离变量方程
+% 	      \item 齐次方程
+% 	      \item 一阶线性方程
+% 	    \end{itemize}
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题7.3：1(4,6),2(3,5),4,7}
+	    \item {\b 习题7.4：4(2),5,8(1),9,13}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{复习与回顾}
+
+\begin{frame}[<+->]{复习与回顾}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 微分方程的相关概念：}
+	  \begin{itemize}
+	    \item 解、通解、特解、初值问题
+	  \end{itemize}
+	  \item {\bf 一阶微分方程的解法}
+	  \begin{itemize}
+	    \item 可分离变量方程
+	    \item 齐次方程
+	    \item 一阶线性方程
+	    \item Bernoulli方程
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+% \begin{frame}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf 课堂练习：}求解下列微分方程\hfill}
+% 		\begin{enumerate}
+% 		  \item $y'=xe^{x+2y}$
+% 		  \item $x(1+y^2)dx+ye^xdy=0$
+% % 		  \item $\sqrt{1-y^2}=3x^2yy'$
+% 		  \item $(e^x+e^{x+y})dx+(e^y+e^{x+y})dy=0$
+% 		  \item $y'-\df{y}{x}=\df{2x}{3y^2}$
+% 		  \item $y'=\df{1}{x+y^2}$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% % 	\bigskip\pause 
+% % 	\begin{exampleblock}{{\bf 课后思考：}求解微分方程\hfill}
+% % 		\begin{columns}
+% % 			\column{.3\textwidth}
+% % 				\begin{enumerate}
+% % 				  \item $y'=(x+y)^2$
+% % 				\end{enumerate}
+% % 			\column{.7\textwidth}
+% % 				\begin{enumerate}
+% % 				  \addtocounter{enumi}{2}
+% % 				  \item $(\sin x+y)dx+(x+\cos y)dy=0$
+% % 				\end{enumerate}
+% % 		\end{columns}
+% % 	\end{exampleblock}
+% \end{frame}
+
+% \begin{frame}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf 课堂练习：}求解微分方程\hfill}
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+% 				\begin{enumerate}
+% 				  \item $y'=xe^{x+2y}$
+% 				  \item $x(1+y^2)dx+ye^xdy=0$
+% 				\end{enumerate}
+% 			\column{.5\textwidth}
+% 				\begin{enumerate}
+% 				  \addtocounter{enumi}{2}
+% 				  \item $\sqrt{1-y^2}=3x^2yy'$
+% 				  \item $xy'-y\ln y=0$
+% 				\end{enumerate}
+% 		\end{columns}
+% 	\end{exampleblock}
+% 	\bigskip\pause 
+% 	\begin{exampleblock}{{\bf 课后思考：}求解微分方程\hfill}
+% 		\begin{columns}
+% 			\column{.3\textwidth}
+% 				\begin{enumerate}
+% 				  \item $y'=(x+y)^2$
+% 				\end{enumerate}
+% 			\column{.7\textwidth}
+% 				\begin{enumerate}
+% 				  \addtocounter{enumi}{2}
+% 				  \item $(\sin x+y)dx+(x+\cos y)dy=0$
+% 				\end{enumerate}
+% 		\end{columns}
+% 	\end{exampleblock}
+% \end{frame}
+
+\section{特殊二阶微分方程的解法}
+
+\begin{frame}
+	\linespread{1.2}
+	\alert{\bf 相对于一阶微分方程，二阶及二阶以上的微分方程的求解更加困难，通常仅有
+	少数的特殊情况是可解的}\pause 
+	
+	\bigskip
+	{\bf 例如：$y^{(n)}=f(x)$型微分方程}\pause 
+	\begin{exampleblock}{{\bf 例1：}求解微分方程：\hfill P417}
+		$$y'''=\sin x-\cos x$$
+	\end{exampleblock}
+	\pause 
+	{\bf 解答：}$y=\cos x+\sin x+C_3x^2+C_2x+C_1$
+\end{frame}
+
+\begin{frame}{1、$y''=f(x,y')$型微分方程}
+	\linespread{1.5}\pause
+	\begin{exampleblock}{{\bf 例2}\hfill P418}
+		解微分方程：$xy''-y'=0$。
+	\end{exampleblock}
+	\pause 
+	\alert{\bf 解：}令$y'=p(x)$，\pause 将原方程化为关于$p$和$x$的微分方程
+	$$\df{\d p}{\d x}=f(x,p)$$
+\end{frame}
+
+\begin{frame}{2、$y''=f(y,y')$型微分方程}
+	\linespread{1.5}\pause 
+	\begin{exampleblock}{{\bf 例3}\hfill P419}
+		解微分方程：$yy''+(y')^2=0$。
+	\end{exampleblock}\pause
+	\alert{\bf 解：}令$y'_x=p(y)$，\pause 则$\df{\d^2y}{\d x^2}=p\df{\d p}{\d
+	y}$，\pause 原方程化为关于$p$和$y$的微分方程 $$\df{\d p}{\d y}=\df{f(y,p)}{p}$$ 
+	
+\end{frame}
+
+% \begin{frame}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例4}\hfill}
+% 		从地面垂直向上发射质量为$m$的炮弹，要使之距离地面$r$，应该至少具备多大的初速度？
+% 		要使之脱离地球引力范围，又应具备最少多大的初速度？（已知地球半径为$R$，重力加速度
+% 		为$g$）
+% 	\end{exampleblock}
+% \end{frame}
+
+\section{二阶线性微分方程}
+
+\begin{frame}{二阶线性微分方程}
+	\linespread{1.2}\pause 
+	{\bb $n$阶线性微分方程：}
+	$$y^{(n)}+a_{n-1}(x)y^{(n-1)}+\ldots+a_1(x)y'+a_0(x)y=f(x)$$\pause 
+	\vspace{-1em}
+	\begin{itemize}
+	  \item {\bb 二阶齐次线性微分方程}
+	  $$\alert{y''+p(x)y'+q(x)y=0}$$\pause
+	  \vspace{-1em} 
+	  \item {\bb 二阶非齐次线性微分方程}
+	  $$\alert{y''+p(x)y'+q(x)y=f(x)}$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{二阶齐次线性微分方程解的结构}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理7.4.1-7.4.2}\hfill P422-423}
+		若$y_1(x),y_2(x)$为二阶齐次线性微分方程
+		$$y''+p(x)y'+q(x)y=0$$
+		的两个解，则\pause 
+		\begin{enumerate}
+		  \item 线性组合${\b y=C_1y_1+C_2y_2}$（$C_1,C_2$为任意常数）仍为该方程的解；\pause 
+		  \item 若$y_1,y_2${\b\underline{线性无关}}，则以上线性组合即为该方程的通解。
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{二阶非齐次线性微分方程解的结构}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理7.4.3}\hfill}
+		若$y^*$是二阶非齐次线性微分方程
+		$$y''+p(x)y'+q(x)y=f(x)\eqno{(1)}$$
+		的一个特解，$Y$是对应齐次方程的通解，则该方程的通解的通解为${\b y=Y+y^*}$。
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例4}\hfill}
+		已知微分方程$(1)$的三个解：$y_1=x,y_2=e^x,y_3=e^{2x}$，
+		求其满足初始条件$y(0)=1,y'(0)=3$的特解。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{二阶齐次线性微分方程的解法}
+	\linespread{1.5}
+	\begin{enumerate}\pause 
+	  \item {\bf Liouville公式：}\\
+	  已知齐次方程的一个特解，如何求另一个？\pause 
+	  \item {\bf 二阶常系数齐次线性微分方程}\\
+	  特征方程法\pause 
+	  \item {\bf 两类特殊的二阶常系数非齐次线性微分方程}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{1、Liouville公式}
+	\linespread{1.2}\pause 
+	{\bb 问题：}已知$y_1(x)$为齐次方程$y''+p(x)y'+q(x)y=0$的一个特解$y_1$，
+	如何求得另一个线性无关的特解$y_2$？\pause 
+	
+	{\bb 解：}设$y_2=uy_1$，其中$u=u(x)$待定\pause ，则
+	$$u\alert{(y''_1+py'_1+qy_1)}+u'(2y'_1+py_1)+y_1u''=0,$$\pause 
+	即$u'(2y'_1+py_1)+y_1u''=0$，\pause 由此可解得
+	$$\alert{u(x)=\dint\df{e^{-\int
+	p(x)dx}}{y_1^2}dx}\hspace{-3em}\pause \eqno{\mbox{\b (Liouville公式)}}$$
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bb Liouville公式：}
+	\vspace{-1ex}
+	$$
+	\alert{y_2=y_1\dint\df{e^{-\int p(x)dx}}{y_1^2}dx}
+	$$
+	\pause 
+	\begin{exampleblock}{{\bf 例5}\hfill P424-例2}
+		已知微分方程
+		$$y''+\df{x}{1-x}y'-\df{1}{1-x}y=0$$
+		的特解$y=e^x$，求其通解。
+	\end{exampleblock}
+% 	\pause 
+% 	{\bf 解答：}$y=C_1x+C_2e^x$
+\end{frame}
+
+\begin{frame}{2、二阶常系数线性微分方程}
+	\linespread{1.2}\pause 
+	{\bb 二阶常系数齐次线性微分方程：}
+	$$y''+py'+qy=0\;(p,q\mbox{为常数})$$\pause 
+	{\bb 解：}设$y=e^{rx}$为方程的解，\pause 则
+	$$e^{rx}(r^2+pr+q)=0$$\pause 
+	即：$$r^2+pr+q=0$$\pause 
+	\alert{\bf 若$r$为以上{\b 特征方程}的根，则
+	$y=e^{rx}$为原方程的解}
+\end{frame}
+
+\begin{frame}{二阶常系数线性微分方程的通解表示}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理}\hfill P426-表7.4.1}
+	记$\Delta=p^2-4q$，\pause 则：
+	{\begin{center}
+	\begin{tabular}{c|c|c|c}
+		\hline
+		{\bb $\Delta$} & {\bb $r$} & {\bb 特解} & {\bb 通解} \\ \hline\pause 
+		$>0$ & \begin{tabular}{cc}相异实根 \\ $r_1,r_2$\end{tabular} &
+		$\begin{array}{ll}y_1=e^{r_1x}\\ y_2=e^{r_2x}\end{array}$ &
+		\alert{$C_1e^{r_1x}+C_2e^{r_2x}$}\\ \hline\pause 
+		$=0$ & 二重实根$r$ &
+		$\begin{array}{ll}y_1=e^{rx}\\ y_2=xe^{rx}\end{array}$ &
+		\alert{$(C_1+xC_2)e^{rx}$}\\ \hline\pause 
+		$<0$ & \begin{tabular}{cc}共轭复根\\ $\alpha\pm i\beta$\end{tabular} &
+		$\begin{array}{ll}y_1=e^{\alpha x}\cos\beta x\\ y_2=e^{\alpha
+		x}\sin\beta x\end{array}$ & 
+		\alert{$\begin{array}{ll}e^{\alpha x}(C_1\cos\beta x\\ +C_2\sin\beta
+		x)\end{array}$}\\ \hline
+	\end{tabular}
+	\end{center}
+	}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例6：}求以下方程的通解\hfill P426：例3-5}
+		\begin{enumerate}
+		  \item $y''-y'-2y=0$
+		  \item $\df{\d^2s}{\d t^2}+2\df{\d s}{\d t}+s=0$
+		  \item $y''-2y'+5y=0$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{二阶常系数非齐次线性方程}
+	\linespread{1.2}\pause 
+%  	$$\alert{y''+p(x)y'+q(x)y=f(x)}$$
+	{\bb 情形一：}$\alert{f(x)=e^{\lambda x}P_m(x)}$\pause 
+	
+	\hspace{4em}(其中$P_m(x)$为$m$阶多项式，$\lambda$为常数)\pause 
+	
+	{\bb 解法：}设方程的特解为
+	$$\alert{y^*=x^ke^{\lambda x}(a_0+a_1x+\ldots+a_mx^m)},$$
+	\pause 其中\alert{\bf $k=0,1,2$分别对应与$\lambda$不是特征方程的根、
+	是特征方程的重根和单根的情况}\pause 
+	\begin{exampleblock}{{\bf 例7：}求如下方程的通解\hfill P427-例6}
+		$$y''-2y'-3y=e^{3x}(1+x^2)$$
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{两类特殊的二阶常系数非齐次线性方程}
+% 	\linespread{1.2}
+% % 	$$\alert{y''+p(x)y'+q(x)y=f(x)}$$
+% 	{\bb 情形一：}$f(x)=e^{\lambda x}P_m(x)$(其中$P_m(x)$为$m$阶多项式)
+% 	{\bb 解法：}设$y^*=e^{\lambda x}Q(x)$为一个特解，则
+% 	$$Q''(x)+(2\lambda+p)Q'(x)+(\lambda^2+p\lambda+q)Q(x)=P_m(x)$$
+% 	\vspace{-3ex}
+% 	\begin{enumerate}
+% 	  \item 若$\lambda^2+p\lambda+q\ne 0$，$\lambda$不是特征方程的根
+% 	  $$y^*=e^{\lambda x}(a_0+a_1x+\ldots+a_mx^m)$$
+% 	  \item $ \lambda^2+p\lambda+q=0,2\lambda+p\ne 0$，$\lambda$是特征方程的单根
+% 	  $$y^*=xe^{\lambda x}(a_0+a_1x+\ldots+a_mx^m)$$
+% 	\end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}{两类特殊的二阶常系数非齐次线性方程}
+% 	\linespread{1.2}
+% % 	$$\alert{y''+p(x)y'+q(x)y=f(x)}$$
+% 	{\bb 情形一：}$f(x)=e^{\lambda x}P_m(x)$(其中$P_m(x)$为$m$阶多项式)
+% 	{\bb 解法：}设$y^*=e^{\lambda x}Q(x)$为一个特解，则
+% 	$$Q''(x)+(2\lambda+p)Q'(x)+(\lambda^2+p\lambda+q)Q(x)=P_m(x)$$
+% 	\vspace{-3ex}
+% 	\begin{enumerate}
+% 	  \addtocounter{enumi}{2}
+% 	  \item $ \lambda^2+p\lambda+q=0,2\lambda+p= 0$，$\lambda$是特征方程的重根
+% 	  $$y^*=x^2e^{\lambda x}(a_0+a_1x+\ldots+a_mx^m)$$
+% 	\end{enumerate}
+% 	综上，根据$\lambda$作为特征方程的根的重数，有
+% 	$$y^*=x^ke^{\lambda x}(a_0+a_1x+\ldots+a_mx^m)$$
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例8：}求如下方程的通解\hfill}
+% 		$$y''-2y'-3y=e^{3x}(1+x^2)$$
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+% 	$$\alert{y''+p(x)y'+q(x)y=f(x)}$$
+	{\bb 情形二：}\pause 
+	$\alert{f(x)=e^{\alpha x}[P_m(x)\cos\beta x+P_l(x)\sin\beta x]}$\pause 
+	
+	(其中$P_m(x),P_l(x)$分别为$m,l$阶多项式，$\beta\ne 0$)\pause 
+	
+	{\bb 解法：}设方程的特解为
+	$$\alert{y^*=x^ke^{\alpha x}[R^{(1)}_n(x)\cos\beta x+R^{(2)}_n(x)\sin\beta
+	x]}$$ \pause 
+	其中：\alert{\bf $n=\max\{m,l\}$，\pause
+	$R^{(1)}_n(x),R^{(2)}_n(x)$均为次数不超过$n$的多项式；
+	\pause 若 $\alpha+i\beta$是特征方程的根，取$k=1$，否则取$k=0$。}\pause 
+	\begin{exampleblock}{{\bf 例8：}求如下方程的一个特解\hfill P428-例7}
+		$$y''+4y=\cos 2x$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{线性方程组解的叠加原理}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例9：}求解如下方程\hfill P434-例11}
+		$$y''-6y'+9y=e^{3x}+9$$
+	\end{exampleblock}
+	\pause
+	\alert{\bf 叠加原理：}若$y_1,y_2$分别是
+	$$y^{(n)}+a_1(x)y^{(n-1)}+\ldots+a_{n-1}(x)y'+a_n(x)y=\alert{f_i(x),\;i=1,2}$$
+	的解，\pause 则$y_1+y_2$是如下方程的解：
+	$$y^{(n)}+a_1(x)y^{(n-1)}+\ldots+a_{n-1}(x)y'+a_n(x)y=\alert{f_1(x)+f_2(x)}$$
+% 	\vspace{-1em}\pause 
+\end{frame}
+
+\begin{frame}{Eular方程}
+	\linespread{1.2}\pause 
+	{\bb 基本形式：}
+	$$x^2y''+pxy'+qy=f(x)$$
+	其中$p,q$为常数
+	
+	\pause 
+	{\bb 解：}令$\alert{x=e^t}$，\pause 将原方程化为二阶常系数线性微分方程
+	$$\alert{y''_{tt}+(p-1)y'_t+qy=f(e^t)}$$
+	\pause 
+	\vspace{-1em}
+	\begin{exampleblock}{{\bf 例10：}求如下方程的通解\hfill P432-例9}
+		$$x^2y''+xy'-y=0$$
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}[<+->]{小结}
+% 	\linespread{1.5}
+% 	\begin{enumerate}
+% 	  \item {\bf 特殊的二阶微分方程：}
+% 	  \begin{itemize}
+% 	    \item $y''=f(x,y')$
+% 	    \item $y''=f(y,y')$
+% 	  \end{itemize}
+% 	  \item {\bf 二阶线性微分方程的解法}
+% 	  \begin{itemize}
+% 	    \item 解的结构
+% 	    \item 齐次方程：特征方程与通解表达式
+% 	    \item 非齐次方程：两类特殊的情形
+% 	  \end{itemize}
+% 	  \item {\bf Eular方程}
+% 	\end{enumerate}
+% \end{frame}
+
+\begin{frame}{课堂练习}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例11：}求解下列微分方程\hfill}
+		\begin{enumerate}
+		  \item $y'=xe^{x+2y}$\pause 
+		  \item $x(1+y^2)\d x+ye^x\d y=0$\pause 
+% 		  \item $\sqrt{1-y^2}=3x^2yy'$
+		  \item $(e^x+e^{x+y})\d x+(e^y+e^{x+y})\d y=0$\pause 
+		  \item $y'=\df{1}{x+y^2}$\pause 
+		  \item $y'-\df{y}{x}=\df{2x}{3y^2}$
+		\end{enumerate}
+	\end{exampleblock}
+% 	\bigskip\pause 
+% 	\begin{exampleblock}{{\bf 课后思考：}求解微分方程\hfill}
+% 		\begin{columns}
+% 			\column{.3\textwidth}
+% 				\begin{enumerate}
+% 				  \item $y'=(x+y)^2$
+% 				\end{enumerate}
+% 			\column{.7\textwidth}
+% 				\begin{enumerate}
+% 				  \addtocounter{enumi}{2}
+% 				  \item $(\sin x+y)dx+(x+\cos y)dy=0$
+% 				\end{enumerate}
+% 		\end{columns}
+% 	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

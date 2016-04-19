@@ -1,0 +1,211 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第九讲、向量值函数}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S9.1-9.3 ）}
+	  \begin{itemize}
+	    \item 理解向量值函数的概念
+	    \item 理解向量值函数极限与连续的概念
+	    \item 理解向量值函数微分与积分的概念及其几何意义
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题9.1：6(2,4)}
+	    \item {\b 习题9.2：2(2),6(1),7,11}
+	    \item {\b 习题9.3：2(2,4),4(2)}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{向量值函数的概念}
+
+\begin{frame}{向量值函数}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义}\hfill}
+		$$f:\mathbb{R}\to\mathbb{R}^n$$
+	\end{block}\pause 
+	例如：
+	\begin{itemize}
+	  \item $\bm{r}(t)=(t\sin t, t\cos t),\;t\in\mathbb{R}^+$\pause 
+	  \item
+	  $\bm{r}(t)=(a+mt)\bm{i}+(b+nt)\bm{j}+(c+pt)\bm{k},\;t\in\mathbb{R}$\pause 
+	\end{itemize}
+	\begin{center}
+		\ba{“向量值函数$\sim$曲线的参数方程”}
+	\end{center}
+\end{frame}
+
+\section{向量值函数的极限与连续}
+
+\begin{frame}{向量值函数的极限与连续}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义}\hfill}
+		已知向量值函数$\bm{r}(t)=(f(t),g(t))$在$t_0$附近有定义\pause 
+		\begin{enumerate}
+		  \item {\bb $\lim\limits_{t\to t_0}\bm{r}(t)=(a,b)$：}
+		  $$\lim\limits_{t\to t_0}f(t)=a,\;\lim\limits_{t\to t_0}g(t)=b$$
+		  \pause\vspace{-1em} 
+		  \item {\bb $\bm{r}(t)$在$t_0$处连续：}
+		  $$\bm{r}(t_0)=\lim\limits_{t\to t_0}\bm{r}(t)$$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例1}\hfill P73-例3}
+		设$\bm{r}(t)=\df{\sin 2t}{t}\bm{i}+\ln(1+t)\bm{j}$，求
+		$\lim\limits_{t\to 0}\bm{r}(t)$。
+	\end{exampleblock}\pause 
+	{\bf 问题：}以上$\bm{r}(t)$在$t=0$处连续吗？\pause
+	\bigskip
+	\begin{exampleblock}{{\bf 例2}\hfill P73-例4}
+		设$\bm{r}(t)=e^{-t}\cos 2t\bm{i}+e^{-t}\sin 2t\bm{j}+e^{-t}\bm{k}$，求
+		$\lim\limits_{t\to +\infty}\bm{r}(t)$。
+	\end{exampleblock}
+\end{frame}
+
+\section{向量值函数的导数与微分}
+
+\begin{frame}{向量值函数的导数与微分}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义9.2.1}\hfill}
+		$$\bm{r}'(t_0)=\lim\limits_{\Delta t\to 0}
+		\df{\bm{r}(t_0+\Delta t)-\bm{r}(t_0)}{\Delta t}$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item {$\bm{r}'(t)$是一个向量；}\pause 
+	  \item $\bm{r}(t)$在$t_0$可导，则其每个分量函数在$t_0$可导\pause
+	  \item {$\bm{r}(t)$在$t_0$可导，则$\bm{r}(t)$在$t_0$连续；}\pause 
+	  \item \ba{$\bm{r}'(t_0)$的几何意义：对应曲线在$t_0$处的切向量}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{block}{\bf 定义}
+		{\bb 曲线$\bm{r}(t)$在区间$I$上光滑：}
+		\begin{enumerate}
+		  \item $\bm{r}'(t)$在$I$上连续
+		  \item $\bm{r}'(t)\ne \bm{0}$
+		\end{enumerate}
+	\end{block}
+	\pause\bigskip
+	\begin{exampleblock}{{\bf 例3}\hfill P78-例2}
+		判断曲线$\bm{r}(t)=(1+t^3,t^2)$是否为光滑曲线？
+	\end{exampleblock}\pause
+	\alert{{\bf 注：}二维向量值函数$\bm{r}(t)$可导，不等价于对应函数$y=f(x)$可导。}
+\end{frame}
+
+\begin{frame}{向量值函数的微分与高阶导数}
+	\linespread{1.5}\pause
+	\begin{itemize}
+	  \item {\bb 向量值函数的微分：}\pause
+	  $$\df{\d\bm{r}}{\d t}=\bm{r}'(t)\;\Leftrightarrow\;
+	  \d\bm{r}=\bm{r}'(t)\d t$$\pause
+	  \vspace{-1em}
+	  \item {\bb 向量值函数的高阶导数：}
+	  $$\bm{r}^{(n)}(t_0)=\left.\df{\d\bm{r}^{(n-1)}(t)}{\d t}\right|_{t=t_0}$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{向量值函数的求导法则}
+	\linespread{1.4}
+	\begin{enumerate}\pause 
+	  \item $(\bm{C})'=\bm{0}$\pause 
+	  \item $[\bm{u}(t)\pm\bm{v}(t)]'=\bm{u}'(t)\pm\bm{v}'(t)$\pause 
+	  \item $[k\bm{u}(t)]'=k\bm{u}'(t)$\pause 
+	  \item $[f(t)\bm{u}(t)]'=f'(t)\bm{u}(t)+f(t)\bm{u}'(t)$\pause 
+	  \item \alert{$[\bm{u}(t)\cdot\bm{v}(t)]'=\bm{u}'(t)\cdot\bm{v}(t)
+	  +\bm{u}(t)\cdot\bm{v}'(t)$}\pause 
+	  \item \alert{$[\bm{u}(t)\times\bm{v}(t)]'=\bm{u}'(t)\times\bm{v}(t)
+	  +\bm{u}(t)\times\bm{v}'(t)$}\pause 
+	  \item $[\bm{u}(f(t))]'=\bm{u}'(f(t))f'(t)$\pause 
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill P79-例4}
+		设$\bm{r}(t)$是可导的向量值函数，且$\bm{r}'(t)\ne 0$，若
+		$|\bm{r}(t)|=C$，证明：$\bm{r}(t)$与$\bm{r}'(t)$垂直。
+	\end{exampleblock}
+	\pause\bigskip
+	\begin{exampleblock}{{\bf 例4}\hfill P79-例5}
+		设质量为$m$的质点的位置为$\bm{r}(t)$，速度和加速度分别为
+		$\bm{v}(t)$和$\bm{a}(t)$，则其角动量$\bm{L}(t)
+		=m\bm{r}(t)\times\bm{v}(t)$，转动力矩$\bm{M}(t)=m\bm{r}(t)
+		\times\bm{a}(t)$，证明：$\bm{L}'(t)=\bm{M}(t)$。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{空间曲线的切线与法平面}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例5}\hfill P80-例6}
+		设空间曲线的参数方程为$\Gamma:x=t,y=t^2,z=t^3$在点
+		$(1,1,1)$处的切线方程与法平面方程。
+	\end{exampleblock}
+\end{frame}
+
+\section{向量值函数的积分}
+
+\begin{frame}{向量值函数的积分}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义9.3.2}\hfill}
+		设向量值函数$\bm{r}(t)$在区间$I$上有定义\pause 
+		\begin{enumerate}
+		  \item {\bb $\bm{R}(t)$是$\bm{r}(t)$在$I$上的一个原函数：}\pause 
+		  $$\bm{R}'(t)=\bm{r}(t)\;(t\in I)$$\pause 
+		  \vspace{-1em}
+		  \item {\bb $\bm{r}(t)$的不定积分：}
+		  $$\dint \bm{r}(t)\d t=\bm{R}(t)+\bm{C}\;(\bm{C}\in\mathbb{R}^n)$$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{向量值函数积分的运算性质}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理}\hfill}
+		\begin{enumerate}
+		  \item {\bf 线性性}\pause 
+		  \item {\bf 区间可加性}\pause 
+		  \item $\dint\bm{r}(t)\d t=\left(\dint f(t)\d t\right)\bm{i}
+		  +\left(\dint g(t)\d t\right)\bm{j}+\left(\dint h(t)\d t\right)\bm{k}$\pause 
+		  \item $\dint_a^b\bm{r}(t)\d t=\bm{R}(t)|_a^b=\bm{R}(b)-\bm{R}(a)$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例6}\hfill P86-6}
+		求解关于向量值函数$\bm{r}(t)$的微分方程
+		$$\df{\d\bm{r}}{\d t}=\df 32(t+1)^{1/2}\bm{i}+e^{-t}\bm{j},\;\bm{r}(0)=0$$
+	\end{exampleblock}
+	\pause
+	\begin{exampleblock}{{\bf 例7}\hfill}
+		一枚导弹以初始速度$\bm{v}_0$，仰角$\alpha$发射，假设导弹只受重力作用，
+		空气阻力可以忽略不记，求导弹的位置函数$\bm{r}(t)$，并问$\alpha$
+		取何值时其射程最远。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 向量值函数：}曲线的参数方程
+	  \item {\bf 向量值函数的极限与连续}
+	  \begin{itemize}
+	    \item 等价于各分量函数的对应性质
+	  \end{itemize}
+	  \item {\bf 向量值函数的微分与积分}
+	  \begin{itemize}
+	    \item 导数向量即曲线的切向量
+	  \end{itemize}
+	\end{enumerate}
+	
+	\pause
+	{\bb 课后阅读：}\alert{P86-8：万有引力与Kapler第二定律}
+\end{frame}

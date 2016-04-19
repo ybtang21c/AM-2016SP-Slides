@@ -1,0 +1,399 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第二十五讲、Gauss公式和Stokes公式}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b (\S 12.4)}
+	  \begin{itemize}
+		\item 掌握Gauss公式
+		\item 了解Stokes公式与旋度的概念
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题12.4：1,2,5,6,8,14}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{Gauss公式}
+
+\begin{frame}{Green公式}
+	\linespread{1.2}\pause
+	\begin{block}{{\bf Green公式}\hfill}
+		$$\oint_LP(x,y)\d x+Q(x,y)\d y=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma $$
+	\end{block}\pause
+	\begin{itemize}
+	  \item \ba{$D$：}$xOy$平面内的\alert{有界闭区域}\pause
+	  \item \ba{$L=\p D$：}分段光滑曲线，按\alert{“左侧法则”}取正向\pause
+	  \item \ba{$P(x,y),Q(x,y)$：}在$D$内有连续偏导数
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Green公式的流量形式}
+	\linespread{1.2}\pause
+	{\bf Green公式：}平面向量场$\bm{v}$，平面区域$D$，$L=\p D$\pause
+	$$\alert{\oint_L\bm{v}\cdot\bm{n}\d s=\iint_D\mathrm{div}\,\bm{v}\d\sigma}$$
+	\bigskip\pause
+	
+	{\bf 推广：}空间向量场$\bm{v}$，\pause 空间区域$\Omega$，\pause $\Sigma=\p\Omega$\pause
+	$$\alert{\oiint_{\Sigma}\bm{v}\cdot\bm{n}\d
+	s=\iiint_{\Omega}\mathrm{div}\,\bm{v}\d\sigma}$$
+\end{frame}
+
+\begin{frame}{Green公式}
+	\linespread{1.2}
+	\begin{block}{{\bf Green公式}\hfill}
+		$$\oint_LP(x,y)\d x+Q(x,y)\d y=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma$$
+	\end{block}
+	\begin{itemize}
+	  \item \ba{$D$：}$xOy$平面内的\alert{有界闭区域}
+	  \item \ba{$L=\p D$：}分段光滑曲线，按\alert{“左侧法则”}取正向
+	  \item \ba{$P(x,y),Q(x,y)$：}在$D$内有连续偏导数
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Gauss公式}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理12.4.1}\hfill}
+	{\small
+		$$\oiint_{\Sigma}P\d y\d z+Q\d z\d x+R\d x\d y=\iiint_{\Omega}
+		\left(\df{\p P}{\p x}+\df{\p Q}{\p y}+\df{\p R}{\p z}\right)\d V$$
+	\vspace{-1em}}\pause
+	\end{block}
+	\begin{itemize}
+	  \item \ba{$\Omega$：}空间\alert{有界闭区域}\pause
+	  \item \ba{$\Sigma=\p\Omega$：}分片光滑曲面，取\alert{“外侧”}为正向\pause
+	  \item \ba{$P(x,y,z),Q(x,y,z),R(x,y,z)$：}在$\Omega$内偏导连续
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例1}\hfill}
+		设向量场$\bm{v}=(x,y,z)$，$\Sigma:x^2+y^2+z^2=R^2$，试验证
+		Gauss公式。
+	\end{exampleblock}
+	\bigskip\pause
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		求流速场$\bm{v}=(x,y,z)$由内向外流过$\Sigma:x^2+y^2=R^2$
+		
+		$(0\leq z\leq H)$侧面的流量。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		设原点处有一电量为$e$的点电荷，求其产生的静电场通过曲面
+		$$\df{x^2}{a^2}+\df{y^2}{b^2}+\df{z^2}{c^2}=1$$
+		的电通量。
+	\end{exampleblock}
+	\pause
+	{\bf 电场强度：}
+	$$\alert{E=\df{ke}{r^2}}$$
+\end{frame}
+
+\begin{frame}{散度与无源场}
+	\linespread{1.2}\pause 
+	{\bb 散度：}
+	$$\alert{\mathrm{div}\,\bm{v}=\df{\p P}{\p x}+\df{\p Q}{\p y}+\df{\p R}{\p
+	z}}$$\pause 
+	{\bb 无源场：}
+	$$\alert{\mathrm{div}\,\bm{v}=0}$$\pause 
+	\begin{block}{{\bf 定理2}\hfill}
+		若向量场$\bm{v}$在空间区域$\Omega$内为无源场，则
+		其通过$\Omega$边界的流量为$0$。
+	\end{block}
+\end{frame}
+
+\begin{frame}{散度的运算法则}
+	\linespread{1.5}\pause 
+	{\bf 已知：}$\bm{v}=(P,Q,R)$，$u=u(x,y,z)$，$C\in\mathbb{R}$，\pause 
+	其中$P,Q,R,u$均可微，则\pause 
+	\begin{enumerate}
+	  \item $\alert{\mathrm{div}(C\bm{v})\pause =C\,\mathrm{div}\,\bm{v}}$\pause 
+	  \item $\alert{\mathrm{div}(u\bm{v})\pause =u\,\mathrm{div}\,\bm{v}
+	  +\bm{v}\cdot\bigtriangledown u}$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{alertblock}{{\bf 例4}(Gauss积分)\hfill}
+		计算
+		$$I(\xi,\eta,\zeta)=\oiint_{\Sigma}
+		\df{\cos(\bm{r},\bm{n})}{|\bm{r}|^2}\d S,$$
+		其中：$\Sigma$为不经过点$P(\xi,\eta,\zeta)$的光滑闭曲面，
+		$\bm{n}$为$\Sigma$上任一点$M$处指向外侧的单位法向量，
+		$\bm{r}=\bm{MP}$。
+	\end{alertblock}\pause
+	{\bf 二维形式的Gauss积分：}
+	$$I=\int_L\df{\cos(\bm{r},\bm{n})}{|\bm{r}|}\d s,$$\pause
+	几何意义：从点$P$处所能看到的曲线$L$的角的度量。
+\end{frame}
+
+\section{Stokes公式}
+
+\begin{frame}{Green公式环量形式的三维推广}
+	\linespread{1.2}
+	{\bf Green公式：}平面向量场$\bm{v}$，平面区域$D$，$L=\p D$\pause 
+	$$\alert{\oint_L\bm{v}\cdot\bm{T}\d s=\iint_D
+	\left(\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma}$$
+% 	\bigskip
+	\pause 
+	{\bf 三维推广：}\pause 空间向量场$\bm{v}$，\pause 空间曲线$L$，\pause $L=\p\Sigma$\pause 
+	\begin{eqnarray*}
+		\alert{\ds\oint_L\bm{v}\cdot\bm{T}\d s}&\alert{=}&
+		\alert{\ds\iint_{\Sigma^+}\left(\df{\p R}{\p y}-\df{\p Q}{\p
+		z}\right)\d\sigma_{yz}}\\ 
+		&& \alert{\hspace{-3cm}\ds\iint_{\Sigma^+}\left(\df{\p P}{\p
+		z}-\df{\p R}{\p x}\right)\d\sigma_{zx}
+		+\iint_{\Sigma^+}\left(\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma_{xy}}
+	\end{eqnarray*}
+\end{frame}
+
+\begin{frame}{Stokes公式}
+	\linespread{1.2}\pause
+	\begin{block}{{\bf 定理3}\hfill}
+	\vspace{-1em}
+	{\small
+		\begin{eqnarray*}
+		{\ds\oint_L\bm{v}\cdot\bm{T}\d s}&{=}&
+		{\ds\iint_{\Sigma^+}\left(\df{\p R}{\p y}-\df{\p Q}{\p
+		z}\right)\d\sigma_{yz}}\\ 
+		&& {\hspace{-2cm}\ds\iint_{\Sigma^+}\left(\df{\p P}{\p
+		z}-\df{\p R}{\p x}\right)\d\sigma_{zx}
+		+\iint_{\Sigma^+}\left(\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma_{xy}}
+	\end{eqnarray*}
+	}
+	\vspace{-1em}\pause
+	\end{block}
+	\begin{itemize}
+	  \item \ba{$\Sigma$：}空间光滑曲面\pause
+	  \item \ba{$L=\p\Sigma$：}空间光滑闭曲线，按\alert{“右手法则”}取正向\pause
+	  \item \ba{$P,Q,R$：}在包含$\Sigma$的空间区域内偏导连续
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例5}\hfill}
+		设向量场$\bm{v}=(-z,y,x)$，曲线$L$为$x^2+z^2=1$与$y=2$的交线，
+		由$y$轴正向看过去为逆时针方向，$\Sigma$为以$L$为边界的圆盘，正向与$y$
+		轴正向一致，试验证Stokes公式。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		计算积分
+		$$I=\oint_Lx^2y\d x+y^2\d y+z\d z,$$
+		其中$L$为$x^2+y^2=1$与$x+z=1$的交线，从$z$轴正向看过去为
+		逆时针方向。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{旋度}
+	\linespread{1.2}\pause 
+	{\bb 旋度：}
+	$$\alert{\mathrm{rot}\,\bm{v}=\left(
+	\df{\p R}{\p y}-\df{\p Q}{\p z},
+	\df{\p P}{\p z}-\df{\p R}{\p x},
+	\df{\p Q}{\p x}-\df{\p P}{\p y}
+	\right)}$$\pause 
+	{记号：}
+	$$\mathrm{rot}\,\bm{v}\quad\pause \mbox{或}\quad\mathrm{curl}\,\bm{v}$$\pause 
+	{\bb Stokes公式的向量形式：}
+	$$\alert{\oint_L\bm{v}\cdot\bm{T}\d s
+	=\iint_{\Sigma}\mathrm{rot}\,\bm{v}\cdot\bm{n}\d S}$$
+\end{frame}
+
+\begin{frame}{旋度的行列式表示}
+	\linespread{1.4}\pause 
+	$$\alert{\mathrm{rot}\,\bm{v}=\bigtriangledown\times\bm{v}\pause 
+	=\left|\begin{array}{ccc}
+		\bm{i} & \bm{j} & \bm{k}\\
+		\df{\p}{\p x} & \df{\p}{\p y} & \df{\p}{\p z}\\
+		P & Q & R
+	\end{array}\right|}$$\pause 
+	{\bb Stokes公式的行列式形式：}\pause 
+	$$\alert{\oint_LP\d x+Q\d y+R\d z=\iint_{\Sigma}
+	\left|\begin{array}{ccc}
+		\d y\d z & \d z\d x & \d x\d y\\
+		\df{\p}{\p x} & \df{\p}{\p y} & \df{\p}{\p z}\\
+		P & Q & R
+	\end{array}\right|}$$
+\end{frame}
+
+\begin{frame}{旋度的运算法则}
+	\linespread{1.5}
+	{\bf 已知：}$\bm{v}=(P,Q,R)$，$u=u(x,y,z)$，$C\in\mathbb{R}$，\pause 
+	其中$P,Q,R,u$均可微，\pause 则
+	\begin{enumerate}
+	  \item $\alert{\mathrm{rot}(C\bm{v})\pause =C\,\mathrm{rot}\,\bm{v}}$\pause 
+	  \item $\alert{\mathrm{rot}(u\bm{v})\pause =u\,\mathrm{rot}\,\bm{v}
+	  +\bigtriangledown u\times\bm{v}}$
+	\end{enumerate}
+% 	\pause
+% 	\begin{exampleblock}{{\bf 例7}\hfill}
+% 		设$r=\sqrt{x^2+y^2+z^2}$，则\pause
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+% 				\begin{enumerate}
+% 				  \item $\mathrm{div}(\bigtriangledown\,r)=$\pause$\alert{\df 2r}$\pause
+% % 				  \item $\mathrm{rot}(\bigtriangledown\,r)=$\pause$\alert{0}$
+% 				\end{enumerate}
+% 			\column{.5\textwidth}
+% 				\begin{enumerate}
+% 				  \addtocounter{enumi}{1}
+% 				  \item $\mathrm{rot}(\bigtriangledown\,r)=$\pause$\alert{0}$
+% 				\end{enumerate}
+% 		\end{columns}
+% 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{无旋场}
+	\linespread{1.2}\pause 
+	{\bb 无旋场：}
+	$$\alert{\mathrm{rot}\,\bm{v}=0}$$\pause 
+	\begin{block}{{\bf 定理4}\hfill}
+		对空间向量场$\bm{v}$，以下条件等价：\pause 
+		\begin{enumerate}
+		  \item $\bm{v}$为无旋场；\pause 
+		  \item $\bm{v}$为保守场(积分与路径无关)；\pause 
+		  \item $\bm{v}$存在势函数。
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例7}\hfill}
+		验证$\bm{F}=\left(x^2,yz,\df{y^2}2\right)$为保守场，并求其势函数。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{旋度的几何意义}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例8}\hfill}
+		刚体绕经过坐标原点的某一轴$l$以角速度$\bm{\omega}$旋转，求其上任一点处
+		线速度$\bm{v}$的旋度。
+	\end{exampleblock}\pause
+	$$\alert{\bm{v}=\bm{\omega}\times\bm{r}}$$
+	\pause%\vspace{1cm}
+	
+	\alert{{\bf 旋度：}曲面上某一点处，垂直于曲面法向量的旋转强度}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例9}\hfill}
+		利用Stokes公式计算积分
+		$$\oint_Lz\d x+x\d y+y\d z,$$
+		其中$L$为$x+y+z=1$被三个坐标面所截成的三角形的边界，其正向
+		与该三角形上侧的法向量满足右手法则。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例10}\hfill}
+		利用Stokes公式计算积分
+		$$\oint_L(y^2-z^2)\d x+(z^2-x^2)\d y+(x^2-y^2)\d z,$$
+		其中$L$为平面$x+y+z=\df 32$截立方体$0\leq x,y,z\leq 1$
+		的截痕，从$x$轴正向看去，取逆时针方向。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf Green公式的推广}
+	  \begin{itemize}
+	    \item 流量形式$\to$Gauss公式
+	    \item 环量形式$\to$Stokes公式
+	  \end{itemize}
+	  \item {\bf 散度与旋度}
+	  \begin{itemize}
+	    \item $\mathrm{div}\,\bm{v}=\bigtriangledown\cdot\bm{v}$
+	    \item $\mathrm{rot}\,\bm{v}=\bigtriangledown\times\bm{v}$
+	  \end{itemize}
+	\end{enumerate}
+% 	\hrule
+% 	\begin{center}
+% 		\ba{注意和曲线积分的概念与方法进行类比}
+% 	\end{center}
+\end{frame}
+
+% \section{补充例题}
+% 
+% \begin{frame}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例9}\hfill}
+% 		\begin{enumerate}
+% 		  \item 
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}{找出以下推导中存在的问题}
+	\linespread{1.8}
+% 	\begin{exampleblock}{{\bf 例11：}找出以下推导中的问题\hfill}
+		$\Omega:r\leq R$，$\Sigma=\p\Omega$，取外侧，
+		$r=\sqrt{x^2+y^2+z^2}$
+		\begin{enumerate}
+		  \item
+		  $\ds\oiint_{\Sigma}\df{x^3}{r^3}\d
+		  y\d z+\df{y^3}{r^3}\d z\d x+\df{z^3}{r^3}\d x\d y$\\ {\hspace{1cm}$=\df
+		  1{R^3}\oiint_{\Sigma}x^3\d y\d z+y^3\d z\d x+z^3\d x\d y$\\ 
+		  \hspace{1cm}$=\df 1{R^3}\iiint_{\Omega}3r^2\d V\alert<2->{=\df
+		  3R\iiint_{\Omega}\d V} =4\pi R^2$}\pause\pause
+		  
+		  \item
+		  $\ds\oiint_{\Sigma}\df{x^3}{r^3}\d
+		  y\d z+\df{y^3}{r^3}\d z\d x+\df{z^3}{r^3}\d x\d y$\\
+		  \alert<4->{$\hspace{1cm}=\ds\iiint_{\Omega}\left[\df{\p}{\p x}\df{x^3}{r^3}+\df{\p}{\p
+		  y}\df{y^3}{r^3}+\df{\p}{\p
+		  z}\df{z^3}{r^3}\right]\d V$}
+		\end{enumerate}
+% 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.8}
+	\begin{exampleblock}{{\bf 例11}\hfill}
+		设$r=\sqrt{x^2+y^2+z^2}$，则\pause
+		\begin{columns}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\mathrm{div}(\bigtriangledown\,r)=$\pause$\alert{\df 2r}$\pause
+% 				  \item $\mathrm{rot}(\bigtriangledown\,r)=$\pause$\alert{0}$
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{1}
+				  \item $\mathrm{rot}(\bigtriangledown\,r)=$\pause$\alert{0}$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

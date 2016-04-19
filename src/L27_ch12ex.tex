@@ -1,0 +1,280 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第二十七讲、对称性在积分计算中的应用}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 关键词}
+	  \begin{itemize}
+		\item (函数的)奇偶性
+		\item (区域的)对称性
+		\item (符号的)对称性
+		\item 定积分、重积分、曲线积分、曲面积分
+	  \vspace{1em}
+	  \end{itemize}
+% 	  \item {\bf  课后作业：}
+% 	  \begin{itemize}
+% 	    \item {\b 习题12.4：1,2,5,6,8,14}
+% 	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+% \section{定积分中的对称性}
+% 
+% \begin{frame}{定积分中的对称性}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 命题1.1}\hfill}
+% 		$$\dint_{-a}^af(x)dx=\left\{\begin{array}{ll}
+% 			0,& f(x)\mbox{是奇函数}\\
+% 			2\dint_0^af(x)dx,& f(x)\mbox{是偶函数}
+% 		\end{array}\right.$$
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{定积分中的对称性}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 命题1.2}\hfill}
+% 		$$\dint_0^{\pi/2}f(\sin x)dx=\dint_0^{\pi/2}f(\cos x)dx$$
+% 	\end{block}
+% 	\begin{exampleblock}{{\bf 例1}\hfill}
+% 		$$\dint_0^{\pi/2}\df{\sin t}{\sin t+\cos t}dt$$
+% 	\end{exampleblock}
+% \end{frame}
+
+% \section{二重积分中的对称性}
+
+\begin{frame}{二重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题2.1}(坐标对称)\hfill}
+		区域$D$关于$x=0$对称，$D_1$为其中$x\geq 0$的部分，则
+		$$\iint_Df(x,y)d\sigma=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}x\mbox{是奇函数}\\
+			2\ds\iint_{D_1}f(x,y)d\sigma,& f\mbox{关于}x\mbox{是偶函数}
+		\end{array}\right.$$
+	\end{block}
+	\pause
+	\alert{{\bf 注：}将以上关于$x$的性质改成关于$y$的，结论同样成立}
+\end{frame}
+
+\begin{frame}{二重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题2.2}\hfill}
+		区域$D$关于$x=0,y=0$都对称，$D_1$为其在第一象限内的部分，
+		若$f(x,y)$关于$x,y$均为偶函数，则
+		$$\iint_Df(x,y)d\sigma=4\iint_{D_1}f(x,y)d\sigma$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例1}\hfill}
+		$$\iint_{x^2+y^2\leq 1}\df{(x+2y)^2}{1+x^2+y^2}d\sigma$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{二重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题2.3}(轴对称)\hfill}
+		区域$D$关于某条直线对称，对$D$内关于该轴对称的任意两点$M,N$，总有
+		$f(M)=-f(N)$，则
+		$$\iint_Df(x,y)d\sigma=0$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例2}\hfill}
+	$D:0\leq x\leq 1,0\leq y\leq 1$，求
+		$$\iint_D(x+y)\mathrm{sgn}(x-y)d\sigma$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{二重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题2.4}\hfill}
+		区域$D$关于$y=x$对称，则
+		$$\iint_Df(x,y)d\sigma=\iint_Df(y,x)d\sigma$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		区域$D$为第一象限内的四分之一单位圆，求
+		$$\iint_D\df{2x^2+x-y+1}{\sqrt{1-x^2-y^2}}d\sigma$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{二重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题2.6}(轮换对称)\hfill}
+		区域$D$内$x,y$地位相同，则
+		$$\iint_Df(x,y)d\sigma=\iint_Df(y,x)d\sigma$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例4}\hfill}
+		区域$D$为第一象限内半径为$2$的圆，$f(x)$恒为正，求
+		$$\iint_D\df{a\sqrt{f(x)}+a\sqrt{f(y)}}{\sqrt{f(x)}+\sqrt{f(y)}}d\sigma$$
+	\end{exampleblock}
+\end{frame}
+
+% \section{三重积分中的对称性}
+
+\begin{frame}{三重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题3.1}(坐标对称)\hfill}
+		空间区域$\Omega$关于$z=0$对称，$\Omega_1$为其中$z\geq 0$的部分，则
+		$$\iiint_{\Omega}fdV=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}z\mbox{是奇函数}\\
+			2\ds\iiint_{\Omega_1}fdV,& f\mbox{关于}z\mbox{是偶函数}
+		\end{array}\right.$$
+	\end{block}
+\end{frame}
+
+\begin{frame}{三重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题3.2}(平面对称)\hfill}
+		区域$\Omega$关于某平面对称，对$\Omega$内关于该平面对称的任意两点$M,N$，
+		总有$f(M)=-f(N)$，则
+		$$\iiint_{\Omega}f(x,y,z)dV=0$$
+	\end{block}
+	\begin{block}{{\bf 命题3.3}\hfill}
+		区域$\Omega$关于平面$y=x$对称，则
+		$$\iiint_{\Omega}f(x,y,z)dV=\iiint_{\Omega}f(y,x,z)dV$$
+	\end{block}
+\end{frame}
+
+\begin{frame}{三重积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题3.4}(轮换对称)\hfill}
+		若区域$\Omega$中$x,y,z$地位相同(例：$\Omega$为一球体)，则积分
+		$$\iiint_{\Omega}f(x,y,z)dV$$
+		中$x,y,z$的次序可以任意交换。
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例5}\hfill}
+		$$\iiint_{x^2+y^2+z^2\leq R^2}\df{x^2-y^2}{(1+x^2+y^2+z^2)
+		^{3/2}}dV$$
+	\end{exampleblock}
+\end{frame}
+
+% \section{对弧长的曲线积分中的对称性}
+
+\begin{frame}{对弧长的曲线积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题4.1}(轴对称)\hfill}
+		曲线$L$关于$x=0$对称，$L_1$为其中$x\geq 0$的部分，则
+		$$\int_{L}f(x,y)ds=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}x\mbox{是奇函数}\\
+			2\ds\int_{L_1}fds,& f\mbox{关于}x\mbox{是偶函数}
+		\end{array}\right.$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		$$\oint_{|x|+|y|=1}\df{x}{|x|+|y|}ds$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{对弧长的曲线积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题4.2}(平面对称)\hfill}
+		空间曲线$L$关于$x=0$对称，$L_1$为其中$x\geq 0$的部分，则
+		$$\int_{L}f(x,y,z)ds=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}x\mbox{是奇函数}\\
+			2\ds\int_{L_1}fds,& f\mbox{关于}x\mbox{是偶函数}
+		\end{array}\right.$$
+	\end{block}
+\end{frame}
+
+% \section{对面积的曲面积分中的对称性}
+
+\begin{frame}{对面积的曲面积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题5.1}(平面对称)\hfill}
+		曲线$\Sigma$关于$x=0$对称，$\Sigma_1$为其中$x\geq 0$的部分，则
+		$$\iint_{\Sigma}f(x,y,z)dS=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}x\mbox{是奇函数}\\
+			2\ds\iint_{\Sigma_1}fdS,& f\mbox{关于}x\mbox{是偶函数}
+		\end{array}\right.$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例7}\hfill}
+		$\Sigma$为$x^2+y^2=R^2$在$z=0$和$z=1$间的部分，求
+		$$\iint_{\Sigma}\df y{x^2+y^2+z^2}dS$$
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{对面积的曲面积分中的对称性}
+% 	\linespread{1.2}
+% 	
+% \end{frame}
+
+\begin{frame}{对面积的曲面积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题5.2}(轮换对称)\hfill}
+		曲面$\Sigma$上$x,y,z$地位相同(例：$\Sigma$为一球面)，则
+		$$\iint_{\Sigma}f(x,y,z)dS$$
+		中$x,y,z$的次序可以任意交换。
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例8}\hfill}
+		$$\oint_{x^2+y^2+z^2=R^2}(x^2+3y^2)dS$$
+	\end{exampleblock}
+\end{frame}
+
+% \section{对坐标的曲线、曲面积分中的对称性}
+
+\begin{frame}{对坐标的曲线、曲面积分中的对称性}
+	\linespread{1.2}
+	\begin{block}{{\bf 命题6.1}(对坐标的曲面积分)\hfill}
+		空间曲面$\Sigma$关于$z=0$对称，$\Sigma_1$为其中$z\geq 0$的部分，则
+		$$\iint_{\Sigma}f(x,y,z)dxdy=\left\{\begin{array}{ll}
+			0,& f\mbox{关于}x\mbox{是偶函数}\\
+			2\ds\iint_{\Sigma_1}fdxdy,& f\mbox{关于}x\mbox{是奇函数}
+		\end{array}\right.$$
+	\end{block}
+	\pause
+	\begin{exampleblock}{{\bf 例9}\hfill}
+		$$\oiint_{x^2+y^2+z^2=R^2}\df{z^2}{x^2+3y^2+1}dS$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 轴对称性：}坐标对称、平面对称
+	  \item {\bf 轮换对称性：}$x,y,z$地位对等
+	\end{enumerate}
+	\pause\bigskip\hrule
+	\begin{center}
+		\ba{对称性：积分区域的对称性}
+		
+		\bigskip\pause
+		\ba{根据不同类型的积分灵活应用}
+	\end{center}
+\end{frame}
+
+% \section{其他对称性}
+% 
+% \begin{frame}{其他对称性}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 命题6.1}\hfill}
+% 		$f(x,y)$连续，$L,L'$分别为从$(0,0)$到$(\pi/2,\pi/2)$和$(\pi,\pi)$的直线段，则
+% 		\begin{enumerate}
+% 		  \item $\dint_Lf(\sin x,\sin y)ds
+% 		  =\dint_Lf(\cos x,\cos y)ds$
+% 		  \item $\dint_Lf(\sin x,\cos y)ds
+% 		  =\dint_Lf(\cos x,\sin y)ds$
+% 		  \item $\dint_{L'}(x+y)f(\sin x,\sin y)ds
+% 		  =\pi\dint_{L'}f(\sin x,\sin y)ds$
+% 		\end{enumerate}
+% 	\end{block}
+% \end{frame}
+
+
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

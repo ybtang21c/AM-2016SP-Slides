@@ -1,0 +1,268 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}
+	\frametitle{第四讲、向量及其运算}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S8.1 ）}
+	  \begin{itemize}
+	    \item 熟练掌握向量及其运算
+% 	    \item 熟练掌握空间平面和直线的方程
+% 	    \begin{itemize}
+% 	      \item 可分离变量方程
+% 	      \item 齐次方程
+% 	      \item 一阶线性方程
+% 	    \end{itemize}
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题8.1：3,4,6,11,13,14,16,18,19,22,24}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{向量的表示}
+
+\begin{frame}{向量（矢量）}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义} \hfill}
+		\begin{enumerate}
+		  \item {\bb $n$维向量：}$n$个实数按一定顺序排列所构成的结构
+		  $$\bm{a}=(a_1,a_2,\ldots,a_n)$$
+		  其中：$a_i\in\mathbb{R},i=1,2,\ldots,n$\pause 
+		  \item {\bb $n$维(向量)空间：}全体$n$维向量的集合
+		  $$\bm{a}\in\mathbb{R}^n$$\pause 
+		  \alert{\bf 几何上，向量既表示一个点，又表示一个方向}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{约定}
+	\linespread{2}
+	\begin{enumerate}\pause 
+	  \item \alert{向量坐标均指向量在直角坐标系下的坐标}\pause 
+	  \item \alert{所使用的坐标系均为“右手系”}\pause 
+	  \item \alert{几何上，只考虑不超过三维的空间}
+	\end{enumerate}
+% 	\alert{\bf 右手系}
+\end{frame}
+
+\begin{frame}{向量的表示}
+	\linespread{0.8}\pause 
+% 	\alert{{\bf 约定：}向量坐标均指向量在直角坐标系下的坐标}
+	\begin{block}{{\bf 定义：}
+	设$\bm{a}=(a_1,a_2,\ldots,a_n)\in\mathbb{R}^n$\hfill}\pause 
+		\begin{enumerate}
+		  \item {\bb 长度(模、范数)：}\vspace{-1ex}
+% 		  \hspace{-1em}
+% 		  $$|\bm{a}|=\sqrt{\sum\limits_{i=1}^na_i^2}$$
+		  $$|\bm{a}|=\left(\sum\limits_{i=1}^na_i^2\right)^{1/2}$$\pause 
+		  \item {\bb 方向余弦：}$\bm{a}$与某个坐标轴$x_i$的夹角的余弦\pause 
+		  $$\cos\alpha_i=\df{a_i}{|\bm{a}|}$$
+% 		  {\bf 由方向余弦所构成的向量是单位向量}
+		  
+		  \pause \ba{两个向量相等$\Leftrightarrow$二者长度相等且方向相同} 
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\section{向量的运算}
+
+\begin{frame}[<+->]{向量的运算}
+	\linespread{2}
+	\begin{enumerate}
+	  \item {\bf 加法与数乘：}$k\bm{a}+l\bm{b}$
+	  \item {\bf 数量积：}$\bm{a}\cdot\bm{b}$
+	  \item {\bf 向量积：}$\bm{a}\times\bm{b}$
+	  \item {\bf 混合积：}$(\bm{a}\times\bm{b})\cdot\bm{c}$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{1、加法与数乘}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义} \hfill}
+		\begin{enumerate}
+		  \item {\bb 加法：}对应分量相加
+		  \item {\bb 数乘：}各分量乘以相同的倍数
+		\end{enumerate}
+	\end{block}\pause 
+	\begin{itemize}
+	  \item \alert{几何上，向量的加法与数乘等价于向量的平移与放缩，\pause 统称{\bf 向量的线性运算}}\pause 
+	  \item \alert{不同维数的向量不能相加！}
+	\end{itemize}
+% 	\alert{\bf 几何上，向量的加法与数乘对应于向量的平移与放缩}
+\end{frame}
+
+\begin{frame}{2、数量积（点乘、内积）}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义} \hfill}
+		设$\bm{a}=(a_1,a_2,\ldots,a_n),\bm{b}=(b_1,b_2,\ldots,b_n)$\pause 
+		$$\bm{a}\cdot\bm{b}=\sum\limits_{i=1}^na_ib_i$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item {\b 交换律：}$\bm{a}\cdot\bm{b}=\bm{b}\cdot\bm{a}$\pause 
+	  \item {\b (数乘)结合律：}
+	  $(\lambda\bm{a})\cdot\bm{b}=\bm{a}(\lambda\bm{b})=\lambda(\bm{a}\cdot\bm{b})$\pause
+	  
+	  \item {\b 分配律：}
+	  $(\bm{a}+\bm{b})\cdot\bm{c}=\bm{a}\cdot\bm{c}+\bm{b}\cdot\bm{c}$\pause 
+	  \item \alert{\bf
+	  $\bm{a}\cdot\bm{b}\cdot\bm{c}$无定义！}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{点乘的几何意义}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理}\hfill}
+		设$\bm{a},\bm{b}\in\mathbb{R}^n$，则
+		$$\bm{a}\cdot\bm{b}=|\bm{a}||\bm{b}|\cos\theta,$$
+		其中$\theta$为$\bm{a},\bm{b}$之间的夹角，约定：$\theta\in[0,\pi]$
+	\end{block}
+	\pause 
+	{\bb 向量$\bm{b}$在向量$\bm{a}$上的投影：}
+	$$(\bm{b})_{\bm{a}}=\df{\bm{a}\cdot\bm{b}}{|\bm{a}|}\pause
+	=|\bm{b}|\cos\theta$$
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{block}{{\bf 推论}\hfill}\pause 
+		\begin{enumerate}
+		  \item $\cos\theta=\df{\bm{a}\cdot\bm{b}}{|\bm{a}||\bm{b}|}$\pause 
+		  \item $|\bm{a}\cdot\bm{b}|\leq|\bm{a}||\bm{b}|$\pause \hfill 
+		  \hspace{-2em}{\b (Cauchy-Schwartz不等式)}\pause 
+		  \item $\bm{a}\cdot\bm{b}=0\Leftrightarrow\bm{a}\perp\bm{b}$
+		\end{enumerate}
+	\end{block}\pause 
+	\bigskip
+	\begin{exampleblock}{{\bf 例1}\hfill}
+		证明：三角形的三条高交与一点。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{向量积（叉乘、矢量积、外积）}
+	\linespread{1.2}
+	\begin{block}{{\bf 定义}\hfill}
+		设$\bm{a}=(a_1,a_2,a_3),\bm{b}=(b_1,b_2,b_3)$，\pause 记
+		$\bm{i},\bm{j},\bm{k}$分别为$x,y,z$轴对应的方向向量，\pause 则
+		$$\bm{a}\times\bm{b}=\left|\begin{array}{ccc}
+		\bm{i} & \bm{j} & \bm{k}\\
+		a_1 & a_2 & a_3\\
+		b_1 & b_2 & b_3
+		\end{array}\right|$$
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}{运算规律}
+	\linespread{1.2}
+	\begin{enumerate}\pause 
+	  \item \ba{反交换律：}$\bm{a}\times\bm{b}=-\bm{b}\times\bm{a}$\pause 
+	  \item (数乘)结合律：
+	  $(\lambda\bm{a})\times\bm{b}=\bm{a}\times(\lambda\bm{b})
+	  =\lambda(\bm{a}\times\bm{b})$\pause
+	  \item 分配律：
+	  $$(\bm{a}+\bm{b})\times\bm{c}=\bm{a}\times\bm{c}+\bm{b}\times\bm{c}$$\pause
+	  \vspace{-3ex} 
+	  \item \alert{$\bm{a}\times\bm{a}=\bm{0}$}{\b （零向量）}\pause 
+	  \item \ba{$\bm{a}\times\bm{b}=0\Leftrightarrow\bm{a},\bm{b}$平行}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{叉乘的几何意义}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		证明：$\bm{i}\times\bm{j}=\bm{k},\bm{j}\times\bm{k}=\bm{i},
+		\bm{k}\times\bm{i}=\bm{j}$
+	\end{exampleblock}
+	\pause 
+	\bigskip
+	\begin{block}{{\bf 性质}\hfill}
+		\begin{enumerate}
+		  \item $\bm{a}\times\bm{b}$与$\bm{a},\bm{b}$均垂直\pause 
+		  \item $\bm{a},\bm{b}$与$\bm{a}\times\bm{b}$服从\alert{“右手法则”}\pause 
+		  \item $|\bm{a}\times\bm{b}|=|\bm{a}||\bm{b}|\sin\theta$，其中$\theta$为
+		  $\bm{a},\bm{b}$的夹角\pause 
+		  \item $|\bm{a}\times\bm{b}|$等于以$\bm{a},\bm{b}$为邻边的平行四边形的面积
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		已知三角形$ABC$的三个顶点为
+		$$A(1,-1,2),\;B(3,2,1),\;C(2,2,3),$$
+		\vspace{-3ex}
+		\begin{enumerate}
+		  \item 求垂直于该三角形所在平面的单位向量；
+		  \item 求该三角形的面积
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{4、混合积}
+	\linespread{1.2}\pause 
+	$$\alert{[\bm{abc}]=(\bm{a}\times\bm{b})\cdot\bm{c}}$$\pause 
+	\vspace{-1em}
+	\begin{block}{{\bf 性质}\hfill}
+		\begin{enumerate}
+		  	\item $(\bm{a}\times\bm{b})\cdot\bm{c}=
+			  \left|\begin{array}{ccc}
+				a_1 & a_2 & a_3\\
+				b_1 & b_2 & b_3\\
+				c_1 & c_2 & c_3
+				\end{array}\right|$\pause 
+			\item $[\bm{abc}]=[\bm{bca}]\pause =[\bm{cab}]$\pause 
+			\item \ba{几何意义：}以$\bm{a},\bm{b},\bm{c}$为邻边的平行六面体体积\pause 
+			\item $[\bm{abc}]=0\Leftrightarrow\bm{a},\bm{b},\bm{c}$共面
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.8}
+	\begin{enumerate}
+	  \item {\bf 向量的表示}
+	  \item {\bf 向量的运算及其性质}
+	  \begin{itemize}
+	    \item 线性运算：平移、放缩
+	    \item 数量积：投影
+	    \item 向量积：正交
+	    \item 混合积：体积
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{课堂练习}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：}判断正误\hfill}
+		\begin{enumerate}
+		  \item $\bm{a}\cdot\bm{a}\cdot\bm{a}=\bm{a^3}$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $\bm{a}\ne 0$时，$\df{\bm{a}}{\bm{a}}=1$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $\bm{a}(\bm{a}\cdot\bm{b})=\bm{a}^2\bm{b}$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $(\bm{a}\cdot\bm{b})^2=\bm{a}^2\bm{b}^2$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $(\bm{a}+\bm{b})\times(\bm{a}-\bm{b})=\bm{a}\times\bm{a}
+		  -\bm{b}\times\bm{b}=0$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $\bm{a}\ne
+		  0$时，$\bm{a}\cdot\bm{b}=\bm{a}\cdot\bm{c}\Rightarrow\bm{b}=\bm{c}$
+		  \quad\pause(\;$\alert{\times}$\;)\pause
+		  \item $\bm{a}\ne
+		  0$时，$\bm{a}\times\bm{b}=\bm{a}\times\bm{c}\Rightarrow\bm{b}=\bm{c}$
+		  \quad\pause(\;$\alert{\times}$\;)
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

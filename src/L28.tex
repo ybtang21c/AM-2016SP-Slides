@@ -1,0 +1,333 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第二十八讲、幂级数及其应用}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b (\S 13.1)}
+	  \begin{itemize}
+		\item 理解函数项级数的概念
+		\item 熟练掌握幂级数收敛域的计算方法
+		\item 熟练掌握幂级数的和函数计算方法
+		\item 熟练掌握函数的幂级数展开
+		\item 了解幂级数的应用
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题13.1：4(3,6,8),6,7,16}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{函数项级数的概念}
+
+\begin{frame}{数项级数与函数项级数}
+	\linespread{1.5}
+	\begin{enumerate}\pause 
+	  \item {\bb 数项级数(无穷级数)：}\pause 无穷多个\alert{数值}依序相加\pause 
+	  $$S=\sum\limits_{n=1}^{\infty}u_n
+	  \pause =\lim\limits_{n\to\infty}\sum\limits_{k=1}^nu_k$$\pause 
+	  \item {\bb 函数项级数：}\pause 无穷多个\alert{函数}依序相加\pause 
+	  $$S(x)=\sum\limits_{n=1}^{\infty}u_n(x)
+	  =\lim\limits_{n\to\infty}\sum\limits_{k=1}^nu_k(x)$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{函数项级数}
+	\linespread{1.2}
+	$$\alert{S(x)=\sum\limits_{n=0}^{\infty}u_n(x)}$$
+	\pause 
+	\begin{enumerate}
+	  \item {\bb 幂级数：}\pause 
+	  $$S(x)=\sum\limits_{n=0}^{\infty}a_n(x-x_0)^n$$\pause 
+	  \item {\bb Fourier级数：}\pause 
+	  $$S(x)=\df{a_0}{2}+\sum\limits_{n=1}^{\infty}
+	  (a_n\cos nx+b_n\sin nx)$$
+	\end{enumerate}
+\end{frame}
+
+\section{幂级数的概念与性质}
+
+\begin{frame}{幂级数}
+	\linespread{1.2}
+	$$\alert{S(x)=\sum\limits_{n=0}^{\infty}a_n(x-x_0)^n}$$
+	其中：$a_n\in\mathbb{R}\,(n\in\mathbb{N})$，$x,x_0\in\mathbb{R}$。
+	
+	\bigskip
+	\pause \quad 令\,{$t=x-x_0$}，\pause 以下重点研究
+	$$\alert{S(x)=\sum\limits_{n=0}^{\infty}a_nx^n}$$
+\end{frame}
+
+\begin{frame}{1、幂级数的收敛性}
+	\linespread{1.8}
+	\begin{exampleblock}{{\bf 例1：}讨论下列幂级数的收敛性\hfill}
+		\begin{columns}\pause 
+			\column{.4\textwidth}
+				\begin{enumerate}
+				  \item $\sum\limits_{n=0}^{\infty}\df{x^n}{n!}$\pause 
+				  \item $\sum\limits_{n=0}^{\infty}x^n$\pause 
+				  \item $\sum\limits_{n=0}^{\infty}n!x^n$\pause 
+				\end{enumerate}
+			\column{.6\textwidth}
+				\alert{$(-\infty<x<+\infty)$}\pause \\[4pt]
+				\alert{$(|x|<1)$}\pause \\[4pt]
+				\alert{($x=0)$}\pause 
+		\end{columns}
+	\end{exampleblock}
+	\vspace{-1em}
+	\begin{itemize}
+	  \item \alert{幂级数的收敛域的特点：\pause {\bf 非空、\pause 对称}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理13.1.1}(Abel定理)\hfill}
+		考虑幂级数
+		$$\sum\limits_{n=0}^{\infty}a_nx^n$$
+		\pause
+% 		\vspace{-1em}
+		\begin{enumerate}
+		  \item 若在$x_0\ne 0$处该级数收敛，则对任意$|x|<|x_0|$，该级数绝对收敛；\pause 
+		  \item 若在$x_0\ne 0$处该级数发散，则对任意$|x|>|x_0|$，该级数发散。\pause 
+		\end{enumerate}
+	\end{block}
+	\begin{itemize}
+% 	  \item \alert{{\bf 注：}幂级数在其收敛域内绝对收敛}\pause
+	  \item \alert{{\bf 推论：}存在幂级数收敛与发散的边界点：$x^*=\pm R$}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{幂级数的收敛域}
+	\linespread{1.2}
+	$$\sum\limits_{n=0}^{\infty}a_n(x-x_0)^n$$
+	\pause 在以$x_0$为中心$R$({\bb 收敛半径})为半径的对称区间内收敛\pause 
+	
+% 	\ba{问：}
+	\begin{enumerate}
+	  \item 在区域的边界处，幂级数的收敛性如何？\pause 
+	  
+	  \alert{利用数项级数的收敛性判别法单独判定}\pause
+	  \item 若级数在$x_1$处条件收敛，$R=$
+	  \pause\underline{\alert{\;$|x_1-x_0|$\;}}\pause
+	\end{enumerate}
+% 	\begin{center}
+% 		\ba{已知幂级数，如何求其收敛域？}
+% 	\end{center}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理13.1.3-4}\hfill}
+		若$\sum\limits_{n=0}^{\infty}a_nx^n$的系数满足
+		$$\limn\left|\df{a_{n+1}}{a_n}\right|=\rho
+		\quad\mbox{或}\quad\limn\sqrt[n]{|a_n|}=\rho,$$
+		则$R=1/\rho$。
+	\end{block}
+	\pause 
+	\begin{exampleblock}{{\bf 例2：}求下列幂级数的收敛域\hfill}
+		\begin{columns}
+			\column{.4\textwidth}
+				\begin{enumerate}
+				  \item $\sum\limits_{n=0}^{\infty}\df{2+(-1)^n}{2^n}x^n$\pause 
+				\end{enumerate}
+			\column{.32\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{1}
+				  \item $\sum\limits_{n=0}^{\infty}\df{(x-1)^n}{2^nn}$\pause 
+				\end{enumerate}
+			\column{.28\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{2}
+				  \item $\sum\limits_{n=0}^{\infty}2^nx^{2n}$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{求幂级数的收敛域}
+	\linespread{1.2}\pause
+	\begin{center}
+		{\bb 先求半径，再讨论端点}
+		\vspace{1ex}\hrule
+		\pause 
+	\end{center}
+	\vspace{-1ex}
+	\begin{enumerate}
+	  \item 标准型幂级数：\pause $\sum\limits_{n=0}^{\infty}a_nx^n$\pause 
+	  $$\alert{R=\limn\left|\df{a_n}{a_{n+1}}\right|}
+	  \pause\quad\mbox{或}\quad \alert{R=\df 1{\limn\sqrt[n]{|a_n|}}}$$\pause 
+	  \vspace{-1em}
+	  \item 非标准型幂级数：\pause 缺项或通项为复合函数\pause 
+	  \begin{center}
+	  	\alert{\underline{先换元、整理，再求收敛半径}}\pause 
+	  \end{center}
+	  \item \alert{比值法极限不存在时，注意使用根值法}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{2、幂级数的和函数}
+	\linespread{1.4}\pause 
+	\begin{block}{{\bf 定理3}(幂级数的运算性质)\hfill}\pause 
+		\begin{enumerate}
+		  \item 两个幂级数的和在其收敛域的交集内收敛\pause 
+% 		  
+% 		  \alert{(求和后幂级数的收敛半径不小于原幂级数收敛半径的最小值\pause
+% 		  ，{\bf 例：}$\sum x^n-\sum x^n/(1+a^n),(0<a<1)$)}\pause
+		  \item 幂级数逐项求导或求不定积分后收敛半径不变；\pause 
+		  \item 幂函数的和函数在其收敛域上连续；\pause 
+		  \item 幂函数逐项求导或求不定积分后，对应和函数分别为原和函数的导函数和原函数。
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		已知
+		$$\df{1}{x+1}=\sum\limits_{n=0}^{\infty}(-x)^n\;(|x|<1),$$
+		求幂级数
+		$$\sum\limits_{n=1}^{\infty}\df{(-1)^{n-1}}{n}x^n$$
+		的和函数。由此证明：
+		$$\ln 2=1-\df 12+\df 13-\df 14+\ldots+\df{(-1)^n}{n}+\ldots$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：}求下列幂级数的和函数\hfill}
+		\begin{columns}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\sum\limits_{n=0}^{\infty}\df{x^n}{n!}$
+				  \item $\sum\limits_{n=0}^{\infty}nx^n$
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{2}
+				  \item $\sum\limits_{n=0}^{\infty}\df{x^n}{n+1}$
+				  \item $\sum\limits_{n=0}^{\infty}n^2x^n$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+	\pause\bigskip
+	\begin{exampleblock}{{\bf 例5}\hfill}
+		求数项级数$\sumn\sum\limits_{k=1}^n\df{k}{2^{n-1}}$的和。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{3、函数的幂级数展开}
+	\linespread{1.2}
+	函数$f(x)$在原点处的无穷阶Taylor展开式：\pause 
+	$$f(x)=\sum\limits_{n=0}^{\infty}\df{f^{(n)}(0)}{n!}x^n$$
+	\pause 称为：{\bb $f(x)$在原点处的Taylor级数(Maclaurin级数)}\pause 
+	\begin{itemize}
+	  \item \alert{{\bf 展开的条件：}\pause $f(x)$在原点处无穷阶可导}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例6：}求如下函数的Maclaurin级数\hfill}\pause 
+		\begin{enumerate}
+		  \item $f(x)=1+x+4x^3-5x^{99}+x^{100}$\pause 
+		  \item $f(x)=(1-x)e^x$\pause 
+		  \item $f(x)=\sin(x-\pi/4)$\pause 
+		  \item $f(x)=\df 1{1-x^2}$\pause 
+		  \item $f(x)=\ln(2+x)$\pause 
+		  \item $f(x)=\arctan x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{幂级数的应用}
+
+\begin{frame}{幂级数的应用}
+	\linespread{1.2}\pause 
+	\begin{enumerate}
+	  \item {\bf 函数值的近似计算}\pause 
+	  \item {\bf 积分的近似计算：}\pause $\dint_0^1e^{-x^2}dx$\pause 
+	  \item {\bf 解微分方程：}\pause 
+	\end{enumerate}
+	\begin{exampleblock}{{\bf 例7}\hfill}
+		求解初值问题：
+		$$xy''+y'+xy=0,\;y(0)=1,\;y'(0)=0$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.2}
+	\begin{enumerate}
+	  \item {\bf 函数项级数的概念}
+	  \item {\bf 幂级数：}
+	  $$S(x)=\sum\limits_{n=1}^{\infty}a_n(x-x_0)^n$$
+	  \begin{itemize}
+	    \item 收敛域与收敛半径
+	    \item 幂级数的和函数
+	    \item 函数的幂级数(Taylor)展开
+	  \end{itemize}
+	  \item {\bf 幂级数的应用}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{课堂练习}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例8：}判断正误\hfill}
+		\begin{enumerate}
+		  \item 幂级数在其收敛域上一定绝对收敛\pause \;{\alert{$(\;\times\;)$}}\pause 
+		  \item 设$\sum a_nx^n,\sum b_nx^n$的收敛半径分别为$R_1,R_2$，
+		  则$\sum(a_n+b_n)x^n$的收敛半径$R=\min\{R_1,R_2\}$\pause 
+		  \;{\alert{$(\;\times\;)$}}\pause 
+		  \item 幂级数与其逐项积分和逐项求导的幂级数的收敛域相同\pause 
+		  \;{\alert{$(\;\times\;)$}}
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例9}\hfill}
+		若$\sum a_n(x-2)^n$在$x=-2$收敛，则在$x=5$处
+		\underline{\;\uncover<2->{\alert{绝对收敛}}\;}；若在$x=-2$处条件收敛，
+		则收敛半径为\underline{\;\uncover<3->{\alert{$4$}}\;}
+	\end{exampleblock}
+	\onslide<4->
+	\bigskip
+	\begin{exampleblock}{{\bf 例10}\hfill}
+		求函数项级数$\sum\limits_{n=1}^{\infty}
+		\sin\df 1 {3n}\left(\df{3+x}{3-2x}\right)^n$
+		的收敛域。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例11}\hfill}
+		求级数$\sum\limits_{n=1}^{\infty}\df{n}{2^{n-1}}$的和。
+	\end{exampleblock}
+	\bigskip
+	\pause
+	\begin{exampleblock}{{\bf 例12}\hfill}
+		将下列函数展开成Maclaurin级数，并求其收敛域
+		\begin{enumerate}
+		  \item $f(x)=\arcsin x$
+		  \item $f(x)=\df 1{1+x+x^2}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

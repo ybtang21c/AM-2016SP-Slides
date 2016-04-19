@@ -1,0 +1,275 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      9566,        266]
+NotebookOptionsPosition[      9114,        245]
+NotebookOutlinePosition[      9467,        261]
+CellTagsIndexPosition[      9424,        258]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Sign", "[", 
+          RowBox[{"x", "+", "Pi", "-", 
+           RowBox[{"2", " ", "Pi", "*", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"IntegerPart", "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"x", "+", "Pi"}], ")"}], "/", 
+                RowBox[{"(", 
+                 RowBox[{"2", " ", "Pi"}], ")"}]}], "]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Sign", "[", 
+                  RowBox[{"(", 
+                   RowBox[{"x", "+", "Pi"}], ")"}], "]"}], "-", "1"}], ")"}], 
+               "/", "2"}]}], ")"}]}], "-", "Pi"}], "]"}], ")"}], " ", 
+        RowBox[{"Pi", "/", "4"}]}], ",", 
+       RowBox[{"Sum", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2", " ", "k"}], "-", "1"}], ")"}], " ", "x"}], "]"}], 
+          "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "k"}], "-", "1"}], ")"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"k", ",", "1", ",", "m"}], "}"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{
+        RowBox[{"-", "2"}], " ", "Pi"}], ",", 
+       RowBox[{"2", " ", "Pi"}]}], "}"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Orange"}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Blue"}], "}"}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", ",", "1", ",", "20"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4220972941658*^9, 3.4220973099708*^9}, {
+   3.516425019921884*^9, 3.516425038286859*^9}, 3.516425082704492*^9, {
+   3.64361513270817*^9, 3.643615169260509*^9}, {3.643615309231597*^9, 
+   3.643615310118222*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`m$$ = 5.42, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`m$$], 1, 20}}, Typeset`size$$ = {831., {68., 73.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`m$12215$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`m$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`m$$, $CellContext`m$12215$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{Sign[$CellContext`x + Pi - 2 
+           Pi (IntegerPart[($CellContext`x + Pi)/(2 Pi)] + (
+              Sign[$CellContext`x + Pi] - 1)/2) - Pi] (Pi/4), 
+         Sum[
+         Sin[(2 $CellContext`k - 1) $CellContext`x]/(2 $CellContext`k - 
+          1), {$CellContext`k, 1, $CellContext`m$$}]}, {$CellContext`x, (-2) 
+         Pi, 2 Pi}, AspectRatio -> Automatic, PlotRange -> {-1, 1}, 
+        PlotStyle -> {{
+           Thickness[0.004], Orange}, {
+           Thickness[0.004], Blue}}], 
+      "Specifications" :> {{$CellContext`m$$, 1, 20}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{876., {112., 117.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.643615068101156*^9, {3.643615139586372*^9, 3.643615169849828*^9}, 
+   3.643615310793618*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Pi", "/", "2"}], "+", 
+        RowBox[{
+         RowBox[{"2", "/", "Pi"}], "*", 
+         RowBox[{"Sum", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"-", "1"}], ")"}], "^", "k"}], "-", "1"}], ")"}], 
+               "/", 
+               RowBox[{"(", 
+                RowBox[{"k", "^", "2"}], ")"}]}], ")"}], "*", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"k", "*", "x"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", "1", ",", "n"}], "}"}]}], "]"}]}]}], ",", 
+       RowBox[{"Abs", "[", 
+        RowBox[{"x", "-", 
+         RowBox[{
+          RowBox[{"Round", "[", 
+           RowBox[{"x", "/", 
+            RowBox[{"(", 
+             RowBox[{"2", " ", "Pi"}], ")"}]}], "]"}], "*", "2", " ", 
+          "Pi"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Blue"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Orange"}], "}"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"AxesOrigin", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "20"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4220971986918*^9, 3.4220972426708*^9}, {
+  3.643615195696267*^9, 3.6436152304503803`*^9}, {3.643615263229402*^9, 
+  3.643615271570408*^9}, {3.643615325685514*^9, 3.643615362954502*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 18.54, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 20}}, Typeset`size$$ = {837., {73., 77.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$12731$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$12731$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{Pi/2 + (2/Pi) 
+          Sum[{(((-1)^$CellContext`k - 1)/$CellContext`k^2) 
+             Cos[$CellContext`k $CellContext`x]}, {$CellContext`k, 
+             1, $CellContext`n$$}], 
+         Abs[$CellContext`x - Round[$CellContext`x/(2 Pi)] 2 
+          Pi]}, {$CellContext`x, -10, 10}, AspectRatio -> Automatic, 
+        PlotStyle -> {{
+           Thickness[0.004], Blue}, {
+           Thickness[0.004], Orange}}, AxesOrigin -> {0, 0}], 
+      "Specifications" :> {{$CellContext`n$$, 1, 20}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{882., {117., 122.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6436150900100813`*^9, {3.643615210736355*^9, 3.643615231350852*^9}, 
+   3.643615272113751*^9, 3.64361532933335*^9}]
+}, Open  ]]
+},
+WindowSize->{1264, 678},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 2387, 68, 63, "Input"],
+Cell[2957, 92, 2038, 43, 246, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5032, 140, 2054, 58, 46, "Input"],
+Cell[7089, 200, 2009, 42, 256, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

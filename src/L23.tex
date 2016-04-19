@@ -1,0 +1,263 @@
+% !Mode:: "TeX:UTF-8"
+
+\begin{frame}{第二十三讲、Green公式与保守场}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b (\S 12.2)}
+	  \begin{itemize}
+		\item 掌握Green公式
+		\item 理解保守场和积分积分与路径的无关性
+		\item 掌握全微分方程的解法
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf  课后作业：}
+	  \begin{itemize}
+	    \item {\b 习题12.2：2,3,7,11,12}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{Green公式}
+
+\begin{frame}{Green公式}
+	\linespread{1.2}\pause
+	\begin{block}{{\bf 定理12.2.1-3}\hfill}
+		$$\oint_LP(x,y)\d x+Q(x,y)\d y=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma$$
+	\end{block}
+	\begin{itemize}
+	  \item<3-5,7> \ba{$D$：}$xOy$平面内的\alert<7>{有界闭区域}
+	  \item<4-5,7> \ba{$L=\p D$：}分段光滑曲线，按\alert{“左侧法则”}取正向
+	  \item<5,7> \ba{$P(x,y),Q(x,y)$：}在$D$内有连续偏导数
+	\end{itemize}
+	\onslide<6>
+	\vspace{-3cm}
+	\begin{exampleblock}{\bf 例1}
+		沿单位圆的逆时针方向计算以下曲线积分
+		$$\oint_Lx\d x+y\d y,\hspace{3em}\oint_Ly\d x+x\d y$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Green公式}
+	\linespread{1.2}
+	$$\alert{\oint_LP(x,y)\d x+Q(x,y)\d y=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma}$$
+	\pause{\bf 说明：}\pause
+	\begin{enumerate}
+	  \item {\bb 左侧法则：}积分区域始终位于曲线方向的左侧；\pause
+	  \item 区域$D$必须有界；\pause
+	  \item $D$的边界可以包含平行于$x$轴和$y$轴的直线；\pause
+	  \item $D$可以是简单闭区域、单连通域和多连通域；
+	\end{enumerate}
+\end{frame}
+
+% \section{Green公式的简单应用}
+
+\begin{frame}{Green公式的简单应用}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		计算椭圆$\df{x^2}{a^2}+\df{y^2}{b^2}\leq 1\,(a>0,b>0)$的面积。
+	\end{exampleblock}
+	\pause
+	$$\alert{\oint_L x\d y-y\d x=2\iint_D\d\sigma}$$
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		设有流速场
+		$$\bm{v}(x,y)=\left(\df{x}{x^2+y^2},
+		\df{y}{x^2+y^2}\right),\;(x^2+y^2\ne 0),$$
+		求其通过以下闭曲线(均取逆时针方向)的流量：
+		\begin{enumerate}
+		  \item $L_1$：不经过原点且不包含原点的任一光滑闭曲线；
+		  \item $L_2$：$x^2+y^2=R^2$
+		  \item $L_3$：$\df{x^2}{a^2}+\df{y^2}{b^2}=1\,(a>0,b>0)$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{向量场与Green公式}
+
+\begin{frame}{散度与无源场}
+	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定义}\hfill}
+		已知流速场
+		$$\bm{v}=(P(x,y),Q(x,y)),\;(x,y)\in D,$$
+		满足Green公式条件\pause ，则
+		\begin{enumerate}
+		  \item {\bb 散度：}$\alert{\mathrm{div}\,\bm v=\df{\p P}{\p x}+\df{\p Q}{\p
+		  y}}$\pause 
+		  $$\oint_L\bm{v}\cdot\bm{n}\d
+		  s=\iint_D\mathrm{div}\,\bm{v}\,\d\sigma$$\pause
+		  \vspace{-1em}
+		  \item {\bb 无源场：}$\alert{\mathrm{div}\,\bm{v}=0}$
+		\end{enumerate}
+% 	\end{block}
+\end{frame}
+
+\begin{frame}{无旋场}
+	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定义}\hfill}
+		已知流速场
+		$$\bm{v}=(P(x,y),Q(x,y)),\;(x,y)\in D,$$
+		满足Green公式条件\pause ，则
+		$$\oint_L\bm{v}\cdot\bm{T}\d s=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)\d\sigma\pause $$
+		\begin{enumerate}
+		  \addtocounter{enumi}{2}
+		  \item {\bb 无旋场：}$\alert{\df{\p Q}{\p x}-\df{\p P}{\p y}=0}$
+		\end{enumerate}
+% 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理}\hfill}
+		\begin{enumerate}
+		  \item 区域$D$内的向量场为无源场，则通过$\p D$的流量为$0$
+		  \item 区域$D$内的向量场为无旋场，则沿$\p D$的环量为$0$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\section{保守场与积分路径无关性}
+
+\begin{frame}{保守场与积分路径无关性}
+	\linespread{1.2}
+	\begin{block}{{\bf 定义}\hfill}
+		设区域$D$内有向量场
+		$\bm{F}(x,y)=(P(x,y),Q(x,y))$，
+		在$D$内任取两点$A,B$，若由$A$到$B$沿任意路径所做的功都一样，
+		也即积分
+		$$\dint_{L_{AB}}P\d x+Q\d y$$
+		的值是与积分路径无关的，
+		则称{\bb $\bm{F}(x,y)$为区域$D$内的一个保守场}
+	\end{block}
+\end{frame}
+
+\begin{frame}{保守场的判定}
+	\linespread{1.2}
+	\begin{block}{{\bf 定理12.2.4}\hfill}
+		$\bm{F}(x,y)=(P(x,y),Q(x,y))$为单连通域$D$内的向量场，
+		$P,Q$具有一阶连续偏导数，则以下条件等价：
+		\begin{enumerate}
+		  \item $\bm{F}$是$D$内的保守场；
+		  \item $\bm{F}$是$D$内的无旋场；
+		  \item 存在$u(x,y)$，使得
+		  $$\d u(x,y)=P(x,y)\d x+Q(x,y)\d y,\;(x,y)\in D$$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{多元函数的原函数}
+	\linespread{1.2}
+	$\bm{F}=(P,Q)$是$D$内的保守场，则存在$u(x,y)$，使得
+	$$\d u(x,y)=P(x,y)\d x+Q(x,y)\d y,\;(x,y)\in D$$
+	\pause $u(x,y)$称为：\pause 
+	\begin{itemize}
+	  \item {\bb 微分式$P\d x+Q\d y$的原函数}\pause 
+	  \item {\bb 向量场$\bm{F}$的势函数}\pause 
+	\end{itemize}
+	\bigskip
+	$$\alert{\dint_{L_{AB}}P\d x+Q\d y=u(x,y)|_A^B}\pause $$
+	{\bf 注：}$u(x,y)$不唯一！
+\end{frame}
+
+\begin{frame}{原函数的计算——折线法}
+	\linespread{1.2}\pause 
+	{\bf $\bm{F}=(P,Q)$是$D$内的保守场，求其势函数$u(x,y)$}\pause 
+	\begin{enumerate}
+	  \item 任取$A(x_0,y_0),\,B(x,y)\in D$\pause 
+	  \item 取折线
+	  $$\alert{L:\,A(x_0,y_0)\to C(x,y_0)\to B(x,y)}\pause $$
+	  \vspace{-1em}
+	  \item 计算积分
+	  \begin{eqnarray*}
+	  	u(x,y)&=&\dint_LP(x,y)\d x+Q(x,y)\d y\pause \\
+	  	&=&\alert{\dint_{x_0}^xP(x,y_0)\d x+\dint_{y_0}^yQ(x,y)\d y}
+	  \end{eqnarray*}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4}\hfill}
+		验证向量场
+		$$\bm{F}=(4x^3y^3-3y^2+5,3x^4y^2-6xy-4)$$
+		为$xOy$平面上的保守场，并求$\bm{F}$的势函数。利用势函数计算
+		$\bm{F}$沿以$(0,1)$为起点，$(1,2)$为终点的路径所做的功。
+	\end{exampleblock}
+\end{frame}
+
+\section{全微分方程}
+
+\begin{frame}{全微分方程}
+	\linespread{1.2}
+	\begin{block}{{\bf 定义}\hfill}
+		若存在$u(x,y)$，满足：
+		$$\d u(x,y)=P(x,y)\d x+Q(x,y)\d y,$$
+		则称{\bb $P(x,y)\d x+Q(x,y)\d y=0$为全微分方程}。\pause
+	\end{block}
+	\begin{block}{{\bf 定理}\hfill}
+		$P(x,y)\d x+Q(x,y)\d y=0$为全微分方程当且仅当
+		$$\df{\p P}{\p y}=\df{\p Q}{\p x}$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例5}\hfill}
+		求微分方程
+		$$(3x^2+6xy^2)\d x+(6x^2y+4y^3)\d y=0$$
+		的通解。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{积分因子法求解微分方程}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		求解微分方程：$x\d y-y\d x=0$。
+	\end{exampleblock}
+	\pause 通过两边同时乘以特定的函数({\bb 积分因子})，可以使原方程化为全微分方程：\pause
+	$$\alert{\df 1{y^2}}(x\d y-y\d x)\pause =-\d\left(\df xy\right)\pause
+	=0,$$\pause
+	\vspace{-1em}
+	$$\alert{\df{1}{x^2+y^2}}(x\d y-y\d x)\pause =-\d\arctan\df xy=0$$
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.4}
+	\begin{enumerate}
+	  \item {\bf Green公式}
+	  $$\oint_LPdx+Qdy=\iint_D\left(
+		\df{\p Q}{\p x}-\df{\p P}{\p y}\right)dxdy$$
+	  \vspace{-1em}
+	  \begin{itemize}
+	    \item $D$：有界闭区域，边界分段光滑
+	    \item 向量场与Green公式，散度
+	  \end{itemize}
+	  \item {\bf 保守场和积分与路径的无关性}
+	  \begin{itemize}
+	    \item 等价定义
+	    \item 原函数与势函数
+	    \item 全微分方程
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf title}\hfill}
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

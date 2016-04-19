@@ -1,0 +1,381 @@
+\begin{frame}{多元函数微分学及其应用}
+	\linespread{1.2}
+	\begin{enumerate}
+	  \item 偏导数与全微分的计算
+	  \item 多重极限收敛的判定
+	  \item 连续、偏导存在、可微、偏导连续、方向导数的关系
+	  \item 方向导数，梯度的几何意义
+	  \item 条件极值与Lagrange乘子法
+	  \item Hessian矩阵与极值的判定
+	  \item 二阶Taylor公式
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{填空}
+	\linespread{1.2}
+% 	$\star$
+	设$f(x,y)=\df{2x+3y}{1+xy\sqrt{x^2+y^2}}$，则$\bm{u}=(2,3)$，
+	则$D_uf(0,0)=$
+	\underline{\uncover<2->{\;\b{$\sqrt{13}$}}\;}.\\[1em]
+	
+	\pause\pause
+	设$f(x,y,z)=\sqrt[z]{x/y}$，则
+	$\d f(1,1,1)=$
+	\underline{\uncover<4->{\;\b{$\d x-\d y$}}\;}.\\[1em]
+	
+	\pause\pause
+	设$z=\ln(1+xy^2)$，则
+	$z''_{xy}(0,1)=$
+	\underline{\uncover<6->{\;\b{$2$}}\;}.\\[1em]
+	
+	\pause\pause
+	函数$z=f(x,y)$满足$z''_{yy}=2$，且$f(x,1)=x+2$，$f'_y(x,1)=x+1$，
+	则$f(x,y)=$
+	\underline{\uncover<8->{\;\b{$y^2+(x-1)y+2$}}\;}.
+\end{frame}
+
+\begin{frame}{填空}
+	\linespread{1.2}
+	设$z''_{xy}=1$，且当$x=0$时，$z=\sin y$； 当$y=0$时，
+	$z=\sin x$，则$z=$
+	\underline{\uncover<2->{\;\b{$xy+\sin x+\sin y$}}\;}.\\[1em]
+	
+	\pause\pause
+	设$(axy^3-y^2\cos x)\d x+(1+by\sin x+3x^2y^2)\d y$为某一函数
+	的全微分，则$(a,b)=$
+	\underline{\uncover<4->{\;\b{$(2,-2)$}}\;}.\\[1em]
+	
+	\pause\pause
+	设$f(x,y)$可微，且$f(0,0)=0$，$f'_x(0,0)=a$，
+	$f'_y(0,0)=b$，且$g(t)=f[t,f(t,t^2)]$，求$g'(0)=$
+	\underline{\uncover<6->{\;\b{$a(1+b)$}}\;}.\\[1em]
+	
+	\pause\pause
+	曲面$2^{\frac xz}+2^{\frac yz}=8$在点$(2,2,1)$处的切平面方程为
+	\underline{\uncover<8->{\;\b{$x+y-4z=0$}}\;}.
+	
+\end{frame}
+
+% \begin{frame}{选择}
+% 	\linespread{1.3}
+% 	考虑二元函数$f(x,y)$在点$(x_0,y_0)$处的下列性质：\ba{I}. 连续；\ba{II}. 
+% 	两个偏导函数均连续；\ba{III}. 可微；\ba{IV}. 两个偏导数均存在，则 
+% 	(\underline{\uncover<2->{\;\b{A}}\;})
+% 	\begin{enumerate}[(A)]
+% 	  \item II$\Rightarrow$III$\Rightarrow$I
+% 	  \item III$\Rightarrow$II$\Rightarrow$I
+% 	  \item III$\Rightarrow$IV$\Rightarrow$I
+% 	  \item III$\Rightarrow$I$\Rightarrow$IV
+% 	\end{enumerate}
+% \end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	设$f'_x(0,0)=1,f'_y(0,0)=2$，则 
+	(\underline{\uncover<2->{\;\b{D}}\;})
+	\begin{enumerate}[(A)]
+	  \item $f(x,y)$在原点连续
+	  \item $\d f(x,y)|_{(0,0)}=\d x+2\d y$
+	  \item $D_uf(0,0)=\cos\alpha+2\cos\beta$，
+	  其中$u=(\cos\alpha,\cos\beta)$
+	  \item $D_{-i}(0,0)=-1$
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	$f(x,y)=\left\{\begin{array}{cc}
+	0,& (x,y)=(0,0)\\ \df{x^2y}{x^2+y^2},& else
+	\end{array}\right.$在原点处
+	(\underline{\uncover<2->{\;\b{C}}\;})
+	\begin{enumerate}[(A)]
+	  \item 不连续
+	  \item 连续但偏导数均不存在
+	  \item 连续且偏导数均存在，但不可微
+	  \item 可微
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	设$f(x,y)$在原点处连续，则下列命题正确的是
+	(\underline{\uncover<2->{\;\b{B}}\;})
+	\begin{enumerate}[(A)]
+	  \item 若极限$\lim\limits_{x\to 0\atop y\to 0}\df{f(x,y)}{|x|+|y|}$
+	  存在，则$f(x,y)$在原点处可微
+	  \item 若极限$\lim\limits_{x\to 0\atop y\to 0}\df{f(x,y)}{x^2+y^2}$
+	  存在，则$f(x,y)$在原点处可微
+	  \item 若$f(x,y)$在原点处可微，则
+	  $\lim\limits_{x\to 0\atop y\to 0}\df{f(x,y)}{|x|+|y|}$存在
+	  \item 若$f(x,y)$在原点处可微，则
+	  $\lim\limits_{x\to 0\atop y\to 0}\df{f(x,y)}{x^2+y^2}$存在
+	\end{enumerate}
+	\pause\ba{反例：}{\b (A)\;$|x|+|y|$\quad(C)\;$x+y$\quad(D)\;$xy$}
+\end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	设$u(x,y)=\phi(x+y)+\phi(x-y)+\dint_{x-y}^{x+y}\psi(t)\d t$，其中
+	$\phi$二阶可导，$\psi$一阶可导，则
+	(\underline{\uncover<2->{\;\b{B}}\;})
+	\begin{enumerate}[(A)]
+	  \item $u''_{xx}=-u''_{yy}$
+	  \item $u''_{xx}=u''_{yy}$
+	  \item $u''_{xy}=u''_{yy}$
+	  \item $u''_{xy}=u''_{xx}$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	设$f(x,y)$在原点连续，且$\lim\limits_{x\to 0\atop y\to 0}
+	\df{f(x,y)}{\sin(x^2+y^2)}=-1$，则
+	(\underline{\uncover<2->{\;\b{C}}\;})
+	\begin{enumerate}[(A)]
+	  \item $f'_x(0,0)$不存在
+	  \item $f'_x(0,0)$存在但非零
+	  \item $f(x,y)$在原点取极值
+	  \item $f(x,y)$在原点不可微
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	设$f(x,y)$在原点附近连续，且$\lim\limits_{x\to 0\atop y\to 0}
+	\df{f(x,y)-xy}{(x^2+y^2)^2}=1$，则原点
+	(\underline{\uncover<2->{\;\b{A}}\;})
+	\begin{enumerate}[(A)]
+	  \item 不是$f(x,y)$的极值点
+	  \item 是$f(x,y)$的极大值点
+	  \item 是$f(x,y)$的极小值点
+	  \item 是否为$f(x,y)$的极值点无法判定
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{选择}
+	\linespread{1.3}
+	函数$z=\sqrt{x^2+y^2}$在原点处
+	(\underline{\uncover<2->{\;\b{C}}\;})
+	\begin{enumerate}[(A)]
+	  \item 不连续
+	  \item 偏导数存在
+	  \item 沿任一方向的方向导数存在
+	  \item 可微
+	\end{enumerate}
+	\pause
+	\ba{注：}{\it\b 注意同济教材与KD教材上关于方向导数定义的不同！}
+% 	{\it\b 方向导数的另一种定义：设
+% 	$\bm{u}=(\cos\alpha,\cos\beta)$，则
+% 	{\small
+% 	$$\left.\df{\p f}{\p \bm{u}}\right|_{(x_0,y_0)}
+% 	=\lim\limits_{\alert{h\to0+}}
+% 	\df{f(x_0+h\cos\alpha,y_0+h\cos\beta)-f(x_0,y_0)}{h}$$}
+% 	}
+\end{frame}
+
+% \begin{frame}
+% 	\linespread{1.2}
+% 	讨论极限$\lim\limits_{(x,y)\to(0,0)}\df{xy^2}{x^2+y^4}$
+% 	
+% 	\pause\alert{提示：}{\it\b  
+% 	$$\lim\limits_{x\to 0\atop{y=kx}}\df{xy^2}{x^2+y^4}=0$$
+% 
+% 	$$\lim\limits_{x\to 0\atop{y^2=x}}\df{xy^2}{x^2+y^4}=\df12$$
+% 	故极限不存在}
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.2}
+% 	证明极限$\lim\limits_{(x,y)\to(0,0)}(1+xy)
+% 	^{\frac1{x+y}}$不存在
+% 	
+% 	\pause\alert{提示：}{\it\b  
+% 	$$\lim\limits_{x\to 0\atop{y=kx}}(1+xy)^{\frac1{x+y}}=1\quad (k\ne -1)$$
+% 
+% 	$$\lim\limits_{x\to 0\atop{y=x^2-x}}(1+xy)^{\frac1{x+y}}=e^{-1}$$
+% 	故极限不存在}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	证明极限$\lim\limits_{(x,y)\to(0,0)}
+	\df{x^3+xy^2}{x^2-xy+y^2}$存在，并求其值
+	
+	\pause\alert{提示：}{\it\b  
+	$$\left|\df{\rho\cos\theta}{1-\sin\theta\cos\theta}\right|
+	\leq \df{\rho}{|1-\frac12\sin2\theta|}\leq2\rho\to 0\quad
+	(\rho\to 0)$$
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	证明$f(x,y)=\left\{\begin{array}{cc}
+	0,& (x,y)=(0,0)\\ (x^2+y^2)\sin\df1{x^2+y^2},& else
+	\end{array}\right.$在原点可微，但偏导函数不连续。
+	
+	\vspace{2cm}\pause
+	\ba{作业：}证明：$z=\sqrt{|xy|}$在原点连续，偏导数存在，但不可微。
+\end{frame}
+
+
+\begin{frame}
+	\linespread{2}
+	设$f(x,y)$可微，且$f(x,2x)=x$，$f'_x(x,2x)=x^2$，求$f'_y(x,2x)$。
+	
+	\pause\alert{提示：}{\it\b  
+	$\d f(x,2x)=f'(x,2x)\d x+2f'_y(x,2x)\d x$
+	}
+	
+	\vspace{2cm}\pause
+	设$u=u(x,y,z)$，证明：$u$为$x,y,z$的线性函数，当且仅当
+	$\bigtriangledown u$为常矢量。
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	正六棱台的上下底和高分别为$1,2,2$，问
+	那个值的测量误差对其侧面积的值影响最大？
+	
+	\pause\alert{提示：}{\it\b  
+	$S=\frac32(x+y)\sqrt{4z^2+3(y-x)^2}$，故	
+	\begin{align}
+	\d z|_{(1,2,2)}&=(S'_x\Delta x+S'_y\Delta y+
+	S'_z\Delta z)|_{(1,2,2)}\notag\\
+	&=\df3{\sqrt{19}}(5\Delta x+14\Delta y+12\Delta z)\notag
+	\end{align}
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	设$u=u(x,y),x=r\cos\theta,y=r\sin\theta$，且$xu'_y-yu'_x=0$，
+	证明：$u$与$\theta$无关。\pause{\it\b（即：$u'_{\theta}=0$）}
+	
+	\bigskip\bigskip\pause
+	\ba{作业：}设$f(u,v)$二阶偏导函数连续，且$f''_{uu}+f''_{vv}=1$，
+	$$g(x,y)=f\left(xy,\df12(x^2-y^2)\right),$$
+	求$g''_{xx}+g''_{yy}$。
+	
+	\pause\alert{答案：}{\it\b  
+	$x^2+y^2$
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\ba{作业：}求$x^2+2y^2+3z^2=21$上一点及该点处的切平面，使该平面过直线
+	$\df{x-6}2=\df{y-3}1=\df{2z-1}{-2}$
+	
+	\pause\alert{答案：}{\it\b 所求的点为$(3,0,2)$和$(1,2,2)$，对应的切平面
+	分别为
+	$$x+2z=7,\quad x+4y+6z=21$$
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	已知曲面$e^{2x-z}=f(\pi y-\sqrt2z)$，$f$可微，证明该曲面为柱面。
+	
+	\pause\alert{提示：}{\it\b 曲面上任一点处的法向量  
+	$$\bm{n}=(2e^{x-z},-\pi f',-e^{2x-z}+\sqrt2f'),$$
+	令$\bm{a}=(1/2,\sqrt2/\pi,1)$，则$\bm{a}\cdot\bm{n}=0$，即证。
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\ba{作业：}设$f(u,v)$可微，证明$f\left(\df{x-a}{z-c},
+	\df{y-b}{z-c}\right)=0$	上任一点处的切平面必经过同一个点。
+	
+	\pause\alert{提示：}{\it\b 该点为$(a,b,c)$。\pause 本题亦可改为证明
+	该曲面为锥面！
+	}
+	
+	\bigskip\pause
+	\ba{作业：}试证曲面$\sqrt{x}+\sqrt y+\sqrt z=\sqrt a\,(a>0)$
+	在任一点处的切平面在三个坐标轴上的截距之和为常数。
+	
+	\bigskip\pause
+	\ba{作业：}已知曲面方程$z=xe^{y/x}$，证明：曲面上任一点$M$处的法线与其
+	向径垂直。
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	求以$(0,0),(0,1),(1,0)$为顶点的三角形区域内
+	到该三点距离平方和最大的点。
+	\bigskip\pause
+	
+	求函数$z=x^2-xy+y^2$在区域$D:|x|+|y|\leq 1$
+	上的最大和最小值。
+	\bigskip\pause
+	
+	\ba{作业：}在半径为$R$的圆的内接三角形中，求面积最大者。
+	\bigskip\pause
+	
+	\ba{作业：}现有资金$36$元，要建造一个无盖的长方体容器，
+	已知底面造价为$3$元每平方米，
+	侧面造价为$1$元每平方米，求可造出的长方体的最大容积。
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\ba{作业：}设$f(x,y)$二阶偏导函数连续，且
+	$$\lim\limits_{x\to 1\atop y\to 0}\df
+	{f(x,y)+x+y-1}{\sqrt{(x-1)^2+y^2}}=0,$$
+	$g(x,y)=f(e^{xy},x^2+y^2)$，
+	证明$g(x,y)$在原点处取得极值，并判断该极值是极大值还是极小值。
+	
+	\pause\alert{提示：}{\it\b  
+	$$f(x,y)=-(x-1)-y+\circ(\rho)$$
+	故$f(1,0)=0,f'_x(1,0)=f'_y(1,0)=-1$。
+	\pause 可以验证：$g(x,y)$在$(1,0)$的梯度为$0$，
+	Hessian矩阵负定。
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	当$x,y,z$均大于零时，求函数$u=\ln x+2\ln y+3\ln z$
+	在球面$x^2+y^2+z^2=6R^2$上的最大值，并证明对任意正数
+	$a,b,c$，成立不等式
+	$$ab^2c^3\leq 108\left(\df{a+b+c}{6}\right)^6$$
+	
+	\pause\alert{提示：}{\it\b  
+	$$L=xy^2z^3+\lambda(x^2+y^2+z^2-6R^2),$$
+	令$\bigtriangledown L=0$，可解得$x=R,y=\sqrt2 R,z=\sqrt3 R$，从而有：
+	$$xy^2z^3\leq 6\sqrt 3R^6=6\sqrt 3\left(\df{x^2+y^2+z^2}{6}\right)^3.$$
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	利用条件极值的方法证明：对任意正数$a,b,c$，有
+	$$abc^3\leq\df{27}{5^5}(a+b+c)^5$$
+	
+	\pause\alert{提示：}{\it\b  
+	$$a+b+c=a+b+\df c3+\df c3+\df c3\geq\sqrt[5]{\df{abc^3}{27}}$$
+	}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	求函数$f(x,y)=x^2y^3$在点$(1,-1)$处带有Peano余项的二阶Taylor公式。
+	
+	\pause\alert{解法一：（公式法）}{\it\b  
+	$$\bigtriangledown f(x,y)=(2xy^3,3x^2y^2)$$
+	$$
+	\bigtriangledown^2 f(x,y)=
+	\left[\begin{array}{cc}
+	2y^3 & 6xy^2\\ 6xy^2 & 6x^2y
+	\end{array}\right]$$
+	}
+	
+	\pause
+	\alert{解法二：（取截断多项式）}
+	{\it\b
+	$$f(x,y)=[(x-1)+1]^2[(y+1)-1]^3$$
+	}
+\end{frame}
